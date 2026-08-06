@@ -1,0 +1,626 @@
+{
+  "scenario": "malicious_privacy.yaml",
+  "api_level": 33,
+  "device_serial": "emulator-5554",
+  "total_nodes": 48,
+  "total_layers": 41,
+  "total_time_seconds": 3.456895112991333,
+  "layer_times": [
+    0.08369565010070801,
+    0.08358049392700195,
+    0.3600943088531494,
+    0.16096258163452148,
+    0.39355015754699707,
+    0.1422748565673828,
+    0.4650430679321289,
+    0.09432530403137207,
+    0.13074064254760742,
+    0.1852250099182129,
+    0.3645451068878174,
+    0.02933359146118164,
+    0.07083272933959961,
+    0.06495165824890137,
+    0.05239295959472656,
+    0.06358742713928223,
+    0.017513751983642578,
+    0.06580400466918945,
+    0.010950803756713867,
+    0.03336691856384277,
+    0.04712486267089844,
+    0.07804155349731445,
+    0.02343297004699707,
+    0.030970335006713867,
+    0.013141632080078125,
+    0.010792016983032227,
+    0.00827646255493164,
+    0.010251760482788086,
+    0.0070040225982666016,
+    0.017225980758666992,
+    0.037914276123046875,
+    0.0353546142578125,
+    0.03538680076599121,
+    0.03573131561279297,
+    0.035393476486206055,
+    0.03489995002746582,
+    0.03504180908203125,
+    0.03567671775817871,
+    0.035128116607666016,
+    0.00853109359741211,
+    0.008747100830078125
+  ],
+  "evidence": [
+    {
+      "node_id": "click_1",
+      "op_type": "UI_CLICK",
+      "timestamp": 2302305.982664,
+      "duration_ms": 81.76762600010261,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 100,
+          "y": 200,
+          "duration": 50
+        },
+        "timestamp": 2302305.982664
+      }
+    },
+    {
+      "node_id": "click_2",
+      "op_type": "UI_CLICK",
+      "timestamp": 2302388.071914,
+      "duration_ms": 83.24073099996895,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 300,
+          "y": 400,
+          "duration": 50
+        },
+        "timestamp": 2302388.071914
+      }
+    },
+    {
+      "node_id": "swipe_1",
+      "op_type": "UI_SWIPE",
+      "timestamp": 2302471.663765,
+      "duration_ms": 359.6656509996392,
+      "evidence": {
+        "type": "ui_swipe",
+        "coordinates": {
+          "x1": 100,
+          "y1": 500,
+          "x2": 300,
+          "y2": 500,
+          "duration": 300
+        },
+        "timestamp": 2302471.663765
+      }
+    },
+    {
+      "node_id": "click_3",
+      "op_type": "UI_CLICK",
+      "timestamp": 2302831.816834,
+      "duration_ms": 160.5560889998451,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 200,
+          "y": 300,
+          "duration": 50
+        },
+        "timestamp": 2302831.816834
+      }
+    },
+    {
+      "node_id": "input_1",
+      "op_type": "UI_INPUT",
+      "timestamp": 2302992.703275,
+      "duration_ms": 393.21805799985304,
+      "evidence": {
+        "type": "ui_input",
+        "text_length": 12,
+        "timestamp": 2302992.703275
+      }
+    },
+    {
+      "node_id": "click_4",
+      "op_type": "UI_CLICK",
+      "timestamp": 2303386.249079,
+      "duration_ms": 141.80853399960324,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 150,
+          "y": 250,
+          "duration": 50
+        },
+        "timestamp": 2303386.249079
+      }
+    },
+    {
+      "node_id": "swipe_2",
+      "op_type": "UI_SWIPE",
+      "timestamp": 2303528.799877,
+      "duration_ms": 464.3490979997441,
+      "evidence": {
+        "type": "ui_swipe",
+        "coordinates": {
+          "x1": 200,
+          "y1": 800,
+          "x2": 200,
+          "y2": 200,
+          "duration": 400
+        },
+        "timestamp": 2303528.799877
+      }
+    },
+    {
+      "node_id": "click_5",
+      "op_type": "UI_CLICK",
+      "timestamp": 2303994.13356,
+      "duration_ms": 93.45474300021306,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 500,
+          "y": 300,
+          "duration": 50
+        },
+        "timestamp": 2303994.13356
+      }
+    },
+    {
+      "node_id": "input_2",
+      "op_type": "UI_INPUT",
+      "timestamp": 2304087.924451,
+      "duration_ms": 130.32152599981055,
+      "evidence": {
+        "type": "ui_input",
+        "text_length": 13,
+        "timestamp": 2304087.924451
+      }
+    },
+    {
+      "node_id": "click_6",
+      "op_type": "UI_CLICK",
+      "timestamp": 2304218.711618,
+      "duration_ms": 184.69172999961302,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 400,
+          "y": 500,
+          "duration": 50
+        },
+        "timestamp": 2304218.711618
+      }
+    },
+    {
+      "node_id": "sms_access_8",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2304404.009568,
+      "duration_ms": 45.273042999673635,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/sms_backup_8.txt",
+        "timestamp": 2304404.009568
+      }
+    },
+    {
+      "node_id": "sms_access_1",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2304449.740703,
+      "duration_ms": 44.42202699976042,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/sms_backup_1.txt",
+        "timestamp": 2304449.740703
+      }
+    },
+    {
+      "node_id": "sms_access_2",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2304494.468862,
+      "duration_ms": 34.717291000299156,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/sms_backup_2.txt",
+        "timestamp": 2304494.468862
+      }
+    },
+    {
+      "node_id": "sms_access_3",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2304529.49342,
+      "duration_ms": 18.11854499997571,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/sms_backup_3.txt",
+        "timestamp": 2304529.49342
+      }
+    },
+    {
+      "node_id": "sms_access_4",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2304547.923706,
+      "duration_ms": 46.29775599995628,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/sms_backup_4.txt",
+        "timestamp": 2304547.923706
+      }
+    },
+    {
+      "node_id": "sms_access_5",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2304594.522889,
+      "duration_ms": 52.816025000065565,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/sms_backup_5.txt",
+        "timestamp": 2304594.522889
+      }
+    },
+    {
+      "node_id": "sms_access_6",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2304647.63673,
+      "duration_ms": 35.990713000297546,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/sms_backup_6.txt",
+        "timestamp": 2304647.63673
+      }
+    },
+    {
+      "node_id": "sms_access_7",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2304684.074331,
+      "duration_ms": 83.96243300009519,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/sms_backup_7.txt",
+        "timestamp": 2304684.074331
+      }
+    },
+    {
+      "node_id": "photo_access_1",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2304768.47642,
+      "duration_ms": 28.902034000027925,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/DCIM/photo_1.jpg",
+        "timestamp": 2304768.47642
+      }
+    },
+    {
+      "node_id": "photo_access_2",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2304801.453562,
+      "duration_ms": 64.23082800023258,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/DCIM/photo_2.jpg",
+        "timestamp": 2304801.453562
+      }
+    },
+    {
+      "node_id": "photo_access_3",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2304868.909569,
+      "duration_ms": 63.99035400012508,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/DCIM/photo_3.jpg",
+        "timestamp": 2304868.909569
+      }
+    },
+    {
+      "node_id": "photo_access_4",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2304933.707994,
+      "duration_ms": 51.72330999979749,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/DCIM/photo_4.jpg",
+        "timestamp": 2304933.707994
+      }
+    },
+    {
+      "node_id": "photo_access_5",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2304989.496221,
+      "duration_ms": 59.680315000005066,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/DCIM/photo_5.jpg",
+        "timestamp": 2304989.496221
+      }
+    },
+    {
+      "node_id": "photo_access_6",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2305049.533965,
+      "duration_ms": 17.01120000006631,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/DCIM/photo_6.jpg",
+        "timestamp": 2305049.533965
+      }
+    },
+    {
+      "node_id": "photo_access_7",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2305067.185355,
+      "duration_ms": 65.17478400003165,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/DCIM/photo_7.jpg",
+        "timestamp": 2305067.185355
+      }
+    },
+    {
+      "node_id": "photo_access_8",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2305133.242014,
+      "duration_ms": 10.215778999961913,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/DCIM/photo_8.jpg",
+        "timestamp": 2305133.242014
+      }
+    },
+    {
+      "node_id": "browser_cache_1",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2305143.815171,
+      "duration_ms": 33.01391399977729,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/browser/cache_1.dat",
+        "timestamp": 2305143.815171
+      }
+    },
+    {
+      "node_id": "browser_cache_2",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2305181.366297,
+      "duration_ms": 36.26209599990398,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/browser/cache_2.dat",
+        "timestamp": 2305181.366297
+      }
+    },
+    {
+      "node_id": "browser_cache_3",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2305224.411681,
+      "duration_ms": 77.58576099993661,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/browser/cache_3.dat",
+        "timestamp": 2305224.411681
+      }
+    },
+    {
+      "node_id": "browser_cache_4",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2305302.337045,
+      "duration_ms": 23.09357300028205,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/browser/cache_4.dat",
+        "timestamp": 2305302.337045
+      }
+    },
+    {
+      "node_id": "browser_cache_5",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2305325.767996,
+      "duration_ms": 30.602109000086784,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/browser/cache_5.dat",
+        "timestamp": 2305325.767996
+      }
+    },
+    {
+      "node_id": "browser_cache_6",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2305356.806389,
+      "duration_ms": 12.598095000255853,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/browser/cache_6.dat",
+        "timestamp": 2305356.806389
+      }
+    },
+    {
+      "node_id": "browser_cache_7",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2305370.135991,
+      "duration_ms": 10.232857000082731,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/browser/cache_7.dat",
+        "timestamp": 2305370.135991
+      }
+    },
+    {
+      "node_id": "browser_cache_8",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2305380.703112,
+      "duration_ms": 7.9460149998776615,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/browser/cache_8.dat",
+        "timestamp": 2305380.703112
+      }
+    },
+    {
+      "node_id": "app_data_1",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2305388.990509,
+      "duration_ms": 9.901591999921948,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/app_data/user_prefs.json",
+        "timestamp": 2305388.990509
+      }
+    },
+    {
+      "node_id": "app_data_2",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2305399.241606,
+      "duration_ms": 6.648742000106722,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/app_data/device_info.json",
+        "timestamp": 2305399.241606
+      }
+    },
+    {
+      "node_id": "package_create_dir",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2305406.207323,
+      "duration_ms": 16.931680000387132,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/private_stolen_data/",
+        "timestamp": 2305406.207323
+      }
+    },
+    {
+      "node_id": "copy_sms_1",
+      "op_type": "FILE_COPY",
+      "timestamp": 2305423.446921,
+      "duration_ms": 37.5987220001407,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/data/local/tmp/sms_backup_1.txt",
+        "dst": "/data/local/tmp/private_stolen_data/sms_1.txt",
+        "timestamp": 2305423.446921
+      }
+    },
+    {
+      "node_id": "copy_sms_2",
+      "op_type": "FILE_COPY",
+      "timestamp": 2305461.343899,
+      "duration_ms": 35.05498499982059,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/data/local/tmp/sms_backup_2.txt",
+        "dst": "/data/local/tmp/private_stolen_data/sms_2.txt",
+        "timestamp": 2305461.343899
+      }
+    },
+    {
+      "node_id": "copy_sms_3",
+      "op_type": "FILE_COPY",
+      "timestamp": 2305496.728246,
+      "duration_ms": 35.05791600001976,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/data/local/tmp/sms_backup_3.txt",
+        "dst": "/data/local/tmp/private_stolen_data/sms_3.txt",
+        "timestamp": 2305496.728246
+      }
+    },
+    {
+      "node_id": "copy_sms_4",
+      "op_type": "FILE_COPY",
+      "timestamp": 2305532.098381,
+      "duration_ms": 35.431812999770045,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/data/local/tmp/sms_backup_4.txt",
+        "dst": "/data/local/tmp/private_stolen_data/sms_4.txt",
+        "timestamp": 2305532.098381
+      }
+    },
+    {
+      "node_id": "copy_photo_1",
+      "op_type": "FILE_COPY",
+      "timestamp": 2305567.803349,
+      "duration_ms": 35.1040529999882,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/data/local/tmp/DCIM/photo_1.jpg",
+        "dst": "/data/local/tmp/private_stolen_data/photo_1.jpg",
+        "timestamp": 2305567.803349
+      }
+    },
+    {
+      "node_id": "copy_photo_2",
+      "op_type": "FILE_COPY",
+      "timestamp": 2305603.219535,
+      "duration_ms": 34.59810999967158,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/data/local/tmp/DCIM/photo_2.jpg",
+        "dst": "/data/local/tmp/private_stolen_data/photo_2.jpg",
+        "timestamp": 2305603.219535
+      }
+    },
+    {
+      "node_id": "copy_photo_3",
+      "op_type": "FILE_COPY",
+      "timestamp": 2305638.144168,
+      "duration_ms": 34.721648999955505,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/data/local/tmp/DCIM/photo_3.jpg",
+        "dst": "/data/local/tmp/private_stolen_data/photo_3.jpg",
+        "timestamp": 2305638.144168
+      }
+    },
+    {
+      "node_id": "copy_cache_1",
+      "op_type": "FILE_COPY",
+      "timestamp": 2305673.149402,
+      "duration_ms": 35.38592700008303,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/data/local/tmp/browser/cache_1.dat",
+        "dst": "/data/local/tmp/private_stolen_data/cache_1.dat",
+        "timestamp": 2305673.149402
+      }
+    },
+    {
+      "node_id": "copy_cache_2",
+      "op_type": "FILE_COPY",
+      "timestamp": 2305708.851837,
+      "duration_ms": 34.80911200027913,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/data/local/tmp/browser/cache_2.dat",
+        "dst": "/data/local/tmp/private_stolen_data/cache_2.dat",
+        "timestamp": 2305708.851837
+      }
+    },
+    {
+      "node_id": "archive_metadata",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2305743.9947,
+      "duration_ms": 8.218744999729097,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/private_stolen_data/metadata.json",
+        "timestamp": 2305743.9947
+      }
+    },
+    {
+      "node_id": "archive_complete_flag",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2305752.475441,
+      "duration_ms": 8.458738000132143,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/private_stolen_data/COMPLETE.flag",
+        "timestamp": 2305752.475441
+      }
+    }
+  ]
+}

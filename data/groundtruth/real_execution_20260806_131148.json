@@ -1,0 +1,628 @@
+{
+  "scenario": "malicious_ransomware.yaml",
+  "api_level": 35,
+  "device_serial": "33061FDH2002UE",
+  "total_nodes": 50,
+  "total_layers": 28,
+  "total_time_seconds": 2.5083158016204834,
+  "layer_times": [
+    0.11181330680847168,
+    0.11326122283935547,
+    0.3782517910003662,
+    0.10951685905456543,
+    0.08994412422180176,
+    0.13428568840026855,
+    0.364304780960083,
+    0.11630392074584961,
+    0.07855796813964844,
+    0.08624458312988281,
+    0.08870482444763184,
+    0.025046586990356445,
+    0.011538982391357422,
+    0.03097248077392578,
+    0.07126188278198242,
+    0.08519363403320312,
+    0.06009531021118164,
+    0.02900552749633789,
+    0.02324223518371582,
+    0.05540037155151367,
+    0.06177806854248047,
+    0.10818815231323242,
+    0.09337425231933594,
+    0.026950597763061523,
+    0.0396275520324707,
+    0.02948307991027832,
+    0.04407978057861328,
+    0.04185056686401367
+  ],
+  "evidence": [
+    {
+      "node_id": "click_1",
+      "op_type": "UI_CLICK",
+      "timestamp": 12922039.855061,
+      "duration_ms": 109.85240899957716,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 100,
+          "y": 200,
+          "duration": 50
+        },
+        "timestamp": 12922039.855061
+      }
+    },
+    {
+      "node_id": "click_2",
+      "op_type": "UI_CLICK",
+      "timestamp": 12922150.034707,
+      "duration_ms": 112.90161800011992,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 300,
+          "y": 400,
+          "duration": 50
+        },
+        "timestamp": 12922150.034707
+      }
+    },
+    {
+      "node_id": "swipe_1",
+      "op_type": "UI_SWIPE",
+      "timestamp": 12922263.332577,
+      "duration_ms": 377.88696700148284,
+      "evidence": {
+        "type": "ui_swipe",
+        "coordinates": {
+          "x1": 100,
+          "y1": 500,
+          "x2": 300,
+          "y2": 500,
+          "duration": 300
+        },
+        "timestamp": 12922263.332577
+      }
+    },
+    {
+      "node_id": "click_3",
+      "op_type": "UI_CLICK",
+      "timestamp": 12922641.592816,
+      "duration_ms": 109.14553999900818,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 200,
+          "y": 300,
+          "duration": 50
+        },
+        "timestamp": 12922641.592816
+      }
+    },
+    {
+      "node_id": "input_1",
+      "op_type": "UI_INPUT",
+      "timestamp": 12922751.129071,
+      "duration_ms": 89.55213200114667,
+      "evidence": {
+        "type": "ui_input",
+        "text_length": 15,
+        "timestamp": 12922751.129071
+      }
+    },
+    {
+      "node_id": "click_4",
+      "op_type": "UI_CLICK",
+      "timestamp": 12922841.073919,
+      "duration_ms": 133.88040299899876,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 400,
+          "y": 500,
+          "duration": 50
+        },
+        "timestamp": 12922841.073919
+      }
+    },
+    {
+      "node_id": "swipe_2",
+      "op_type": "UI_SWIPE",
+      "timestamp": 12922975.349101,
+      "duration_ms": 363.912569001317,
+      "evidence": {
+        "type": "ui_swipe",
+        "coordinates": {
+          "x1": 500,
+          "y1": 300,
+          "x2": 100,
+          "y2": 300,
+          "duration": 300
+        },
+        "timestamp": 12922975.349101
+      }
+    },
+    {
+      "node_id": "click_5",
+      "op_type": "UI_CLICK",
+      "timestamp": 12923339.74208,
+      "duration_ms": 115.83621100150049,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 540,
+          "y": 400,
+          "duration": 50
+        },
+        "timestamp": 12923339.74208
+      }
+    },
+    {
+      "node_id": "img_scan_8",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923455.926457,
+      "duration_ms": 12.2338209990412,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Pictures/img_8.heic",
+        "timestamp": 12923455.926457
+      }
+    },
+    {
+      "node_id": "doc_scan_1",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923468.405671,
+      "duration_ms": 11.330350998789072,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Documents/doc_1.pdf",
+        "timestamp": 12923468.405671
+      }
+    },
+    {
+      "node_id": "doc_scan_2",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923479.986838,
+      "duration_ms": 9.383309999480844,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Documents/doc_2.docx",
+        "timestamp": 12923479.986838
+      }
+    },
+    {
+      "node_id": "doc_scan_3",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923489.643991,
+      "duration_ms": 8.40654000081122,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Documents/doc_3.xlsx",
+        "timestamp": 12923489.643991
+      }
+    },
+    {
+      "node_id": "doc_scan_4",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923498.294098,
+      "duration_ms": 8.173126000910997,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Documents/doc_4.ppt",
+        "timestamp": 12923498.294098
+      }
+    },
+    {
+      "node_id": "doc_scan_5",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923506.701237,
+      "duration_ms": 9.013225998729467,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Documents/doc_5.txt",
+        "timestamp": 12923506.701237
+      }
+    },
+    {
+      "node_id": "doc_scan_6",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923515.999213,
+      "duration_ms": 9.12819099985063,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Documents/doc_6.md",
+        "timestamp": 12923515.999213
+      }
+    },
+    {
+      "node_id": "doc_scan_7",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923525.424039,
+      "duration_ms": 8.743573999032378,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Documents/doc_7.json",
+        "timestamp": 12923525.424039
+      }
+    },
+    {
+      "node_id": "img_scan_9",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923534.486667,
+      "duration_ms": 8.79597599990666,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Pictures/img_9.jpg",
+        "timestamp": 12923534.486667
+      }
+    },
+    {
+      "node_id": "doc_scan_8",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923543.553294,
+      "duration_ms": 11.673886001110077,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Documents/doc_8.xml",
+        "timestamp": 12923543.553294
+      }
+    },
+    {
+      "node_id": "doc_scan_9",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923555.511748,
+      "duration_ms": 10.358850000426173,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Documents/doc_9.csv",
+        "timestamp": 12923555.511748
+      }
+    },
+    {
+      "node_id": "doc_scan_10",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923566.327581,
+      "duration_ms": 10.189327999949455,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Documents/doc_10.log",
+        "timestamp": 12923566.327581
+      }
+    },
+    {
+      "node_id": "doc_scan_11",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923576.848542,
+      "duration_ms": 11.11086100153625,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Documents/doc_11.yaml",
+        "timestamp": 12923576.848542
+      }
+    },
+    {
+      "node_id": "img_scan_1",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923588.287565,
+      "duration_ms": 10.619800999760628,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Pictures/img_1.jpg",
+        "timestamp": 12923588.287565
+      }
+    },
+    {
+      "node_id": "img_scan_2",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923599.179268,
+      "duration_ms": 10.2458459995687,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Pictures/img_2.png",
+        "timestamp": 12923599.179268
+      }
+    },
+    {
+      "node_id": "img_scan_3",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923609.696864,
+      "duration_ms": 10.720650000497699,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Pictures/img_3.gif",
+        "timestamp": 12923609.696864
+      }
+    },
+    {
+      "node_id": "img_scan_10",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923620.711912,
+      "duration_ms": 11.286380998790264,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Pictures/img_10.png",
+        "timestamp": 12923620.711912
+      }
+    },
+    {
+      "node_id": "img_scan_4",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923632.296721,
+      "duration_ms": 8.497012998908758,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Pictures/img_4.bmp",
+        "timestamp": 12923632.296721
+      }
+    },
+    {
+      "node_id": "img_scan_5",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923641.091669,
+      "duration_ms": 9.56331199966371,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Pictures/img_5.webp",
+        "timestamp": 12923641.091669
+      }
+    },
+    {
+      "node_id": "img_scan_6",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923650.925857,
+      "duration_ms": 11.403185000643134,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Pictures/img_6.svg",
+        "timestamp": 12923650.925857
+      }
+    },
+    {
+      "node_id": "img_scan_7",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923662.607419,
+      "duration_ms": 10.633295001462102,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Pictures/img_7.tiff",
+        "timestamp": 12923662.607419
+      }
+    },
+    {
+      "node_id": "doc_scan_12",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923673.532383,
+      "duration_ms": 11.26031299866736,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Documents/doc_12.pdf",
+        "timestamp": 12923673.532383
+      }
+    },
+    {
+      "node_id": "doc_scan_13",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923685.087778,
+      "duration_ms": 12.550917999818921,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Documents/doc_13.pdf",
+        "timestamp": 12923685.087778
+      }
+    },
+    {
+      "node_id": "doc_scan_14",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923697.911543,
+      "duration_ms": 11.177908999845386,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Documents/doc_14.pdf",
+        "timestamp": 12923697.911543
+      }
+    },
+    {
+      "node_id": "img_scan_11",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923709.438363,
+      "duration_ms": 13.97859499976039,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Pictures/img_11.jpg",
+        "timestamp": 12923709.438363
+      }
+    },
+    {
+      "node_id": "doc_scan_15",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923723.716828,
+      "duration_ms": 10.418331999331713,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Documents/doc_15.pdf",
+        "timestamp": 12923723.716828
+      }
+    },
+    {
+      "node_id": "img_scan_12",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923734.483246,
+      "duration_ms": 11.206035999581218,
+      "evidence": {
+        "type": "file_create",
+        "path": "/data/local/tmp/Pictures/img_12.jpg",
+        "timestamp": 12923734.483246
+      }
+    },
+    {
+      "node_id": "create_encrypted_dir",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12923745.988281,
+      "duration_ms": 30.669694999232888,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/.encrypted",
+        "timestamp": 12923745.988281
+      }
+    },
+    {
+      "node_id": "encrypt_doc_1",
+      "op_type": "FILE_COPY",
+      "timestamp": 12923776.977912,
+      "duration_ms": 70.91867000050843,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/data/local/tmp/Documents/doc_1.pdf",
+        "dst": "/data/local/tmp/.encrypted/doc_1.pdf.enc",
+        "timestamp": 12923776.977912
+      }
+    },
+    {
+      "node_id": "encrypt_doc_2",
+      "op_type": "FILE_COPY",
+      "timestamp": 12923848.268564,
+      "duration_ms": 84.84117999859154,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/data/local/tmp/Documents/doc_2.docx",
+        "dst": "/data/local/tmp/.encrypted/doc_2.docx.enc",
+        "timestamp": 12923848.268564
+      }
+    },
+    {
+      "node_id": "encrypt_doc_3",
+      "op_type": "FILE_COPY",
+      "timestamp": 12923933.47654,
+      "duration_ms": 59.734928000718355,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/data/local/tmp/Documents/doc_3.xlsx",
+        "dst": "/data/local/tmp/.encrypted/doc_3.xlsx.enc",
+        "timestamp": 12923933.47654
+      }
+    },
+    {
+      "node_id": "delete_doc_1",
+      "op_type": "FILE_DELETE",
+      "timestamp": 12923993.545274,
+      "duration_ms": 28.663726998493075,
+      "evidence": {
+        "type": "file_delete",
+        "path": "/data/local/tmp/Documents/doc_1.pdf",
+        "timestamp": 12923993.545274
+      }
+    },
+    {
+      "node_id": "delete_doc_2",
+      "op_type": "FILE_DELETE",
+      "timestamp": 12924022.568106,
+      "duration_ms": 22.887159001082182,
+      "evidence": {
+        "type": "file_delete",
+        "path": "/data/local/tmp/Documents/doc_2.docx",
+        "timestamp": 12924022.568106
+      }
+    },
+    {
+      "node_id": "delete_doc_3",
+      "op_type": "FILE_DELETE",
+      "timestamp": 12924045.791772,
+      "duration_ms": 55.065481999889016,
+      "evidence": {
+        "type": "file_delete",
+        "path": "/data/local/tmp/Documents/doc_3.xlsx",
+        "timestamp": 12924045.791772
+      }
+    },
+    {
+      "node_id": "encrypt_img_1",
+      "op_type": "FILE_COPY",
+      "timestamp": 12924101.2198,
+      "duration_ms": 61.41522400081158,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/data/local/tmp/Pictures/img_1.jpg",
+        "dst": "/data/local/tmp/.encrypted/img_1.jpg.enc",
+        "timestamp": 12924101.2198
+      }
+    },
+    {
+      "node_id": "encrypt_img_2",
+      "op_type": "FILE_COPY",
+      "timestamp": 12924162.979938,
+      "duration_ms": 107.8453559987247,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/data/local/tmp/Pictures/img_2.png",
+        "dst": "/data/local/tmp/.encrypted/img_2.png.enc",
+        "timestamp": 12924162.979938
+      }
+    },
+    {
+      "node_id": "encrypt_img_3",
+      "op_type": "FILE_COPY",
+      "timestamp": 12924271.196819,
+      "duration_ms": 93.00701200030744,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/data/local/tmp/Pictures/img_3.gif",
+        "dst": "/data/local/tmp/.encrypted/img_3.gif.enc",
+        "timestamp": 12924271.196819
+      }
+    },
+    {
+      "node_id": "delete_img_1",
+      "op_type": "FILE_DELETE",
+      "timestamp": 12924364.534189,
+      "duration_ms": 26.60946499928832,
+      "evidence": {
+        "type": "file_delete",
+        "path": "/data/local/tmp/Pictures/img_1.jpg",
+        "timestamp": 12924364.534189
+      }
+    },
+    {
+      "node_id": "delete_img_2",
+      "op_type": "FILE_DELETE",
+      "timestamp": 12924391.499252,
+      "duration_ms": 39.28579599969089,
+      "evidence": {
+        "type": "file_delete",
+        "path": "/data/local/tmp/Pictures/img_2.png",
+        "timestamp": 12924391.499252
+      }
+    },
+    {
+      "node_id": "delete_img_3",
+      "op_type": "FILE_DELETE",
+      "timestamp": 12924431.175891,
+      "duration_ms": 29.095611998811364,
+      "evidence": {
+        "type": "file_delete",
+        "path": "/data/local/tmp/Pictures/img_3.gif",
+        "timestamp": 12924431.175891
+      }
+    },
+    {
+      "node_id": "ransom_note",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12924460.648144,
+      "duration_ms": 43.688941000029445,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/RANSOM_NOTE.txt",
+        "timestamp": 12924460.648144
+      }
+    },
+    {
+      "node_id": "ransom_complete",
+      "op_type": "FILE_CREATE",
+      "timestamp": 12924504.761763,
+      "duration_ms": 41.44050499983132,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/RANSOM_COMPLETE.flag",
+        "timestamp": 12924504.761763
+      }
+    }
+  ]
+}

@@ -1,0 +1,288 @@
+{
+  "scenario": "baseline_20.yaml",
+  "api_level": 33,
+  "device_serial": "emulator-5554",
+  "total_nodes": 20,
+  "total_layers": 20,
+  "total_time_seconds": 6.549157619476318,
+  "layer_times": [
+    0.07826662063598633,
+    0.08312296867370605,
+    0.37627601623535156,
+    0.17420721054077148,
+    0.37326931953430176,
+    0.15676569938659668,
+    0.4702301025390625,
+    0.08249592781066895,
+    0.18219423294067383,
+    0.16128182411193848,
+    0.14352178573608398,
+    0.40971970558166504,
+    0.04532599449157715,
+    0.050594329833984375,
+    0.11984682083129883,
+    0.03494381904602051,
+    0.07768964767456055,
+    0.3112146854400635,
+    0.07815742492675781,
+    3.140001058578491
+  ],
+  "evidence": [
+    {
+      "node_id": "click_1",
+      "op_type": "UI_CLICK",
+      "timestamp": 2354776.315902,
+      "duration_ms": 75.51068800035864,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 100,
+          "y": 200,
+          "duration": 50
+        },
+        "timestamp": 2354776.315902
+      }
+    },
+    {
+      "node_id": "click_2",
+      "op_type": "UI_CLICK",
+      "timestamp": 2354852.159233,
+      "duration_ms": 82.7641799999401,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 300,
+          "y": 400,
+          "duration": 50
+        },
+        "timestamp": 2354852.159233
+      }
+    },
+    {
+      "node_id": "swipe_1",
+      "op_type": "UI_SWIPE",
+      "timestamp": 2354935.237788,
+      "duration_ms": 375.93242699978873,
+      "evidence": {
+        "type": "ui_swipe",
+        "coordinates": {
+          "x1": 100,
+          "y1": 500,
+          "x2": 300,
+          "y2": 500,
+          "duration": 300
+        },
+        "timestamp": 2354935.237788
+      }
+    },
+    {
+      "node_id": "click_3",
+      "op_type": "UI_CLICK",
+      "timestamp": 2355311.618486,
+      "duration_ms": 173.78390299994498,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 200,
+          "y": 300,
+          "duration": 50
+        },
+        "timestamp": 2355311.618486
+      }
+    },
+    {
+      "node_id": "input_1",
+      "op_type": "UI_INPUT",
+      "timestamp": 2355485.752319,
+      "duration_ms": 372.9341400000267,
+      "evidence": {
+        "type": "ui_input",
+        "text_length": 12,
+        "timestamp": 2355485.752319
+      }
+    },
+    {
+      "node_id": "click_4",
+      "op_type": "UI_CLICK",
+      "timestamp": 2355859.016892,
+      "duration_ms": 156.3919329997152,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 150,
+          "y": 250,
+          "duration": 50
+        },
+        "timestamp": 2355859.016892
+      }
+    },
+    {
+      "node_id": "swipe_2",
+      "op_type": "UI_SWIPE",
+      "timestamp": 2356015.803116,
+      "duration_ms": 469.8996570003219,
+      "evidence": {
+        "type": "ui_swipe",
+        "coordinates": {
+          "x1": 200,
+          "y1": 800,
+          "x2": 200,
+          "y2": 200,
+          "duration": 400
+        },
+        "timestamp": 2356015.803116
+      }
+    },
+    {
+      "node_id": "click_5",
+      "op_type": "UI_CLICK",
+      "timestamp": 2356486.016846,
+      "duration_ms": 82.19728600000963,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 500,
+          "y": 300,
+          "duration": 50
+        },
+        "timestamp": 2356486.016846
+      }
+    },
+    {
+      "node_id": "input_2",
+      "op_type": "UI_INPUT",
+      "timestamp": 2356568.514489,
+      "duration_ms": 181.85811399994418,
+      "evidence": {
+        "type": "ui_input",
+        "text_length": 12,
+        "timestamp": 2356568.514489
+      }
+    },
+    {
+      "node_id": "click_6",
+      "op_type": "UI_CLICK",
+      "timestamp": 2356750.699773,
+      "duration_ms": 160.95686500007287,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 400,
+          "y": 500,
+          "duration": 50
+        },
+        "timestamp": 2356750.699773
+      }
+    },
+    {
+      "node_id": "click_7",
+      "op_type": "UI_CLICK",
+      "timestamp": 2356911.98753,
+      "duration_ms": 143.18033700017259,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 250,
+          "y": 350,
+          "duration": 50
+        },
+        "timestamp": 2356911.98753
+      }
+    },
+    {
+      "node_id": "swipe_3",
+      "op_type": "UI_SWIPE",
+      "timestamp": 2357055.570178,
+      "duration_ms": 405.79047300014645,
+      "evidence": {
+        "type": "ui_swipe",
+        "coordinates": {
+          "x1": 100,
+          "y1": 300,
+          "x2": 500,
+          "y2": 300,
+          "duration": 300
+        },
+        "timestamp": 2357055.570178
+      }
+    },
+    {
+      "node_id": "file_create_1",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2357465.435462,
+      "duration_ms": 44.09095100034028,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/test1.txt",
+        "timestamp": 2357465.435462
+      }
+    },
+    {
+      "node_id": "file_create_2",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2357510.758543,
+      "duration_ms": 50.05751099996269,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/test2.txt",
+        "timestamp": 2357510.758543
+      }
+    },
+    {
+      "node_id": "file_copy_1",
+      "op_type": "FILE_COPY",
+      "timestamp": 2357561.252151,
+      "duration_ms": 119.39889300009236,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/sdcard/test1.txt",
+        "dst": "/sdcard/test1_copy.txt",
+        "timestamp": 2357561.252151
+      }
+    },
+    {
+      "node_id": "file_create_3",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2357681.096083,
+      "duration_ms": 34.4496639999561,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/test3.txt",
+        "timestamp": 2357681.096083
+      }
+    },
+    {
+      "node_id": "file_delete_1",
+      "op_type": "FILE_DELETE",
+      "timestamp": 2357719.302768,
+      "duration_ms": 73.99208700004965,
+      "evidence": {
+        "type": "file_delete",
+        "path": "/sdcard/test2.txt",
+        "timestamp": 2357719.302768
+      }
+    },
+    {
+      "node_id": "app_start_1",
+      "op_type": "APP_START",
+      "timestamp": 2357793.713814,
+      "duration_ms": 310.7770059998147,
+      "evidence": {
+        "type": "app_start",
+        "package": "com.android.settings",
+        "timestamp": 2357793.713814
+      }
+    },
+    {
+      "node_id": "app_stop_1",
+      "op_type": "APP_STOP",
+      "timestamp": 2358104.947568,
+      "duration_ms": 77.69136900035664,
+      "evidence": {
+        "type": "app_stop",
+        "package": "com.android.settings",
+        "timestamp": 2358104.947568
+      }
+    }
+  ]
+}

@@ -1,0 +1,575 @@
+{
+  "scenario": "malicious_phishing.yaml",
+  "api_level": 33,
+  "device_serial": "emulator-5554",
+  "total_nodes": 44,
+  "total_layers": 35,
+  "total_time_seconds": 6.826131105422974,
+  "layer_times": [
+    0.08504915237426758,
+    0.08330678939819336,
+    0.35562777519226074,
+    0.1880052089691162,
+    0.3481783866882324,
+    0.18994927406311035,
+    0.3801383972167969,
+    0.18290233612060547,
+    0.2368166446685791,
+    0.14771604537963867,
+    0.44527387619018555,
+    0.17171740531921387,
+    0.5542716979980469,
+    0.161393404006958,
+    0.11177515983581543,
+    0.5210003852844238,
+    2.2341036796569824,
+    0.0400547981262207,
+    0.04061555862426758,
+    0.042645931243896484,
+    0.019598960876464844,
+    0.019234418869018555,
+    0.02097010612487793,
+    0.010706663131713867,
+    0.00970768928527832,
+    0.008472442626953125,
+    0.008494377136230469,
+    0.00847625732421875,
+    0.008921146392822266,
+    0.007961750030517578,
+    0.008391141891479492,
+    0.03827357292175293,
+    0.037955522537231445,
+    0.01846599578857422,
+    0.07991576194763184
+  ],
+  "evidence": [
+    {
+      "node_id": "click_1",
+      "op_type": "UI_CLICK",
+      "timestamp": 2305954.200354,
+      "duration_ms": 83.22889499971643,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 540,
+          "y": 200,
+          "duration": 50
+        },
+        "timestamp": 2305954.200354
+      }
+    },
+    {
+      "node_id": "click_2",
+      "op_type": "UI_CLICK",
+      "timestamp": 2306037.716775,
+      "duration_ms": 83.04172999970615,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 300,
+          "y": 400,
+          "duration": 50
+        },
+        "timestamp": 2306037.716775
+      }
+    },
+    {
+      "node_id": "swipe_1",
+      "op_type": "UI_SWIPE",
+      "timestamp": 2306121.023709,
+      "duration_ms": 355.32807700010017,
+      "evidence": {
+        "type": "ui_swipe",
+        "coordinates": {
+          "x1": 100,
+          "y1": 600,
+          "x2": 300,
+          "y2": 600,
+          "duration": 300
+        },
+        "timestamp": 2306121.023709
+      }
+    },
+    {
+      "node_id": "click_3",
+      "op_type": "UI_CLICK",
+      "timestamp": 2306476.671617,
+      "duration_ms": 187.6836000001058,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 200,
+          "y": 300,
+          "duration": 50
+        },
+        "timestamp": 2306476.671617
+      }
+    },
+    {
+      "node_id": "input_1",
+      "op_type": "UI_INPUT",
+      "timestamp": 2306664.692235,
+      "duration_ms": 347.8130530002527,
+      "evidence": {
+        "type": "ui_input",
+        "text_length": 13,
+        "timestamp": 2306664.692235
+      }
+    },
+    {
+      "node_id": "click_4",
+      "op_type": "UI_CLICK",
+      "timestamp": 2307012.907264,
+      "duration_ms": 189.564231000375,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 400,
+          "y": 500,
+          "duration": 50
+        },
+        "timestamp": 2307012.907264
+      }
+    },
+    {
+      "node_id": "swipe_2",
+      "op_type": "UI_SWIPE",
+      "timestamp": 2307202.816847,
+      "duration_ms": 379.8126390003599,
+      "evidence": {
+        "type": "ui_swipe",
+        "coordinates": {
+          "x1": 500,
+          "y1": 300,
+          "x2": 100,
+          "y2": 300,
+          "duration": 300
+        },
+        "timestamp": 2307202.816847
+      }
+    },
+    {
+      "node_id": "click_5",
+      "op_type": "UI_CLICK",
+      "timestamp": 2307582.947718,
+      "duration_ms": 182.5750250001438,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 320,
+          "y": 450,
+          "duration": 50
+        },
+        "timestamp": 2307582.947718
+      }
+    },
+    {
+      "node_id": "fake_login_start",
+      "op_type": "UI_CLICK",
+      "timestamp": 2307765.851224,
+      "duration_ms": 236.4975829999894,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 540,
+          "y": 800,
+          "duration": 50
+        },
+        "timestamp": 2307765.851224
+      }
+    },
+    {
+      "node_id": "fake_username_field",
+      "op_type": "UI_CLICK",
+      "timestamp": 2308002.666176,
+      "duration_ms": 147.3999359998852,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 540,
+          "y": 450,
+          "duration": 50
+        },
+        "timestamp": 2308002.666176
+      }
+    },
+    {
+      "node_id": "input_username",
+      "op_type": "UI_INPUT",
+      "timestamp": 2308150.387175,
+      "duration_ms": 444.8412729999982,
+      "evidence": {
+        "type": "ui_input",
+        "text_length": 15,
+        "timestamp": 2308150.387175
+      }
+    },
+    {
+      "node_id": "fake_password_field",
+      "op_type": "UI_CLICK",
+      "timestamp": 2308596.298508,
+      "duration_ms": 169.38228499982506,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 540,
+          "y": 550,
+          "duration": 50
+        },
+        "timestamp": 2308596.298508
+      }
+    },
+    {
+      "node_id": "input_password",
+      "op_type": "UI_INPUT",
+      "timestamp": 2308767.487176,
+      "duration_ms": 553.8395859999582,
+      "evidence": {
+        "type": "ui_input",
+        "text_length": 13,
+        "timestamp": 2308767.487176
+      }
+    },
+    {
+      "node_id": "fake_login_button",
+      "op_type": "UI_CLICK",
+      "timestamp": 2309321.652913,
+      "duration_ms": 161.02888600016013,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 540,
+          "y": 700,
+          "duration": 50
+        },
+        "timestamp": 2309321.652913
+      }
+    },
+    {
+      "node_id": "fake_2fa_field",
+      "op_type": "UI_CLICK",
+      "timestamp": 2309483.09278,
+      "duration_ms": 111.35907900007442,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 540,
+          "y": 600,
+          "duration": 50
+        },
+        "timestamp": 2309483.09278
+      }
+    },
+    {
+      "node_id": "input_2fa",
+      "op_type": "UI_INPUT",
+      "timestamp": 2309594.889651,
+      "duration_ms": 520.6170319998637,
+      "evidence": {
+        "type": "ui_input",
+        "text_length": 6,
+        "timestamp": 2309594.889651
+      }
+    },
+    {
+      "node_id": "capture_creds_1",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2312288.286655,
+      "duration_ms": 9.263385999947786,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/stolen_creds/credentials_1.txt",
+        "timestamp": 2312288.286655
+      }
+    },
+    {
+      "node_id": "capture_creds_2",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2312297.884274,
+      "duration_ms": 7.749017999973148,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/stolen_creds/credentials_2.txt",
+        "timestamp": 2312297.884274
+      }
+    },
+    {
+      "node_id": "capture_creds_3",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2312305.984367,
+      "duration_ms": 8.479063999839127,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/stolen_creds/device_fingerprint.json",
+        "timestamp": 2312305.984367
+      }
+    },
+    {
+      "node_id": "capture_creds_4",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2312314.736946,
+      "duration_ms": 8.833633000031114,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/stolen_creds/network_info.json",
+        "timestamp": 2312314.736946
+      }
+    },
+    {
+      "node_id": "capture_creds_5",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2312323.830541,
+      "duration_ms": 9.156982000451535,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/stolen_creds/target_apps.txt",
+        "timestamp": 2312323.830541
+      }
+    },
+    {
+      "node_id": "capture_creds_6",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2312333.285298,
+      "duration_ms": 7.986880999989808,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/stolen_creds/session_tokens.txt",
+        "timestamp": 2312333.285298
+      }
+    },
+    {
+      "node_id": "capture_creds_7",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2312341.524773,
+      "duration_ms": 8.11975200008601,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/stolen_creds/cookies.txt",
+        "timestamp": 2312341.524773
+      }
+    },
+    {
+      "node_id": "encrypt_creds_2",
+      "op_type": "FILE_COPY",
+      "timestamp": 2312349.903473,
+      "duration_ms": 39.781750000081956,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/sdcard/stolen_creds/credentials_2.txt",
+        "dst": "/sdcard/stolen_creds/credentials_2.enc",
+        "timestamp": 2312349.903473
+      }
+    },
+    {
+      "node_id": "encrypt_creds_3",
+      "op_type": "FILE_COPY",
+      "timestamp": 2312389.996492,
+      "duration_ms": 40.30169600015506,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/sdcard/stolen_creds/device_fingerprint.json",
+        "dst": "/sdcard/stolen_creds/device_fingerprint.enc",
+        "timestamp": 2312389.996492
+      }
+    },
+    {
+      "node_id": "encrypt_creds_4",
+      "op_type": "FILE_COPY",
+      "timestamp": 2312430.603475,
+      "duration_ms": 42.31831200001761,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/sdcard/stolen_creds/session_tokens.txt",
+        "dst": "/sdcard/stolen_creds/session_tokens.enc",
+        "timestamp": 2312430.603475
+      }
+    },
+    {
+      "node_id": "delete_plaintext_1",
+      "op_type": "FILE_DELETE",
+      "timestamp": 2312473.266849,
+      "duration_ms": 19.290959000121802,
+      "evidence": {
+        "type": "file_delete",
+        "path": "/sdcard/stolen_creds/credentials_1.txt",
+        "timestamp": 2312473.266849
+      }
+    },
+    {
+      "node_id": "delete_plaintext_2",
+      "op_type": "FILE_DELETE",
+      "timestamp": 2312492.844099,
+      "duration_ms": 18.93290499970317,
+      "evidence": {
+        "type": "file_delete",
+        "path": "/sdcard/stolen_creds/credentials_2.txt",
+        "timestamp": 2312492.844099
+      }
+    },
+    {
+      "node_id": "delete_plaintext_3",
+      "op_type": "FILE_DELETE",
+      "timestamp": 2312512.108319,
+      "duration_ms": 20.65105600003153,
+      "evidence": {
+        "type": "file_delete",
+        "path": "/sdcard/stolen_creds/device_fingerprint.json",
+        "timestamp": 2312512.108319
+      }
+    },
+    {
+      "node_id": "exfil_ready_flag",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2312533.07377,
+      "duration_ms": 10.38172800000757,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/stolen_creds/READY_TO_EXFIL.flag",
+        "timestamp": 2312533.07377
+      }
+    },
+    {
+      "node_id": "c2_prepare",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2312543.789469,
+      "duration_ms": 9.400553000159562,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/outbound_data/request_1.json",
+        "timestamp": 2312543.789469
+      }
+    },
+    {
+      "node_id": "c2_transmit_1",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2312553.569081,
+      "duration_ms": 8.084166999906301,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/outbound_data/request_2.json",
+        "timestamp": 2312553.569081
+      }
+    },
+    {
+      "node_id": "c2_transmit_2",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2312562.016539,
+      "duration_ms": 8.126486000139266,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/outbound_data/request_3.json",
+        "timestamp": 2312562.016539
+      }
+    },
+    {
+      "node_id": "c2_transmit_3",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2312570.426417,
+      "duration_ms": 8.20528299966827,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/outbound_data/request_4.json",
+        "timestamp": 2312570.426417
+      }
+    },
+    {
+      "node_id": "c2_transmit_4",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2312578.944426,
+      "duration_ms": 8.593791999854147,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/outbound_data/request_5.json",
+        "timestamp": 2312578.944426
+      }
+    },
+    {
+      "node_id": "c2_finalize",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2312587.864038,
+      "duration_ms": 7.655921000055969,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/outbound_data/request_final.json",
+        "timestamp": 2312587.864038
+      }
+    },
+    {
+      "node_id": "phishing_complete",
+      "op_type": "FILE_CREATE",
+      "timestamp": 2312595.76171,
+      "duration_ms": 8.141178999561816,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/PHISHING_COMPLETE.flag",
+        "timestamp": 2312595.76171
+      }
+    },
+    {
+      "node_id": "delete_c2_traces_1",
+      "op_type": "FILE_DELETE",
+      "timestamp": 2312604.159835,
+      "duration_ms": 17.367957000155002,
+      "evidence": {
+        "type": "file_delete",
+        "path": "/sdcard/outbound_data/request_1.json",
+        "timestamp": 2312604.159835
+      }
+    },
+    {
+      "node_id": "delete_traces_1",
+      "op_type": "FILE_DELETE",
+      "timestamp": 2312621.810077,
+      "duration_ms": 20.351044999901205,
+      "evidence": {
+        "type": "file_delete",
+        "path": "/sdcard/stolen_creds/READY_TO_EXFIL.flag",
+        "timestamp": 2312621.810077
+      }
+    },
+    {
+      "node_id": "delete_c2_traces_2",
+      "op_type": "FILE_DELETE",
+      "timestamp": 2312642.507132,
+      "duration_ms": 19.401318000163883,
+      "evidence": {
+        "type": "file_delete",
+        "path": "/sdcard/outbound_data/request_2.json",
+        "timestamp": 2312642.507132
+      }
+    },
+    {
+      "node_id": "delete_traces_2",
+      "op_type": "FILE_DELETE",
+      "timestamp": 2312662.225215,
+      "duration_ms": 17.887602999806404,
+      "evidence": {
+        "type": "file_delete",
+        "path": "/sdcard/PHISHING_COMPLETE.flag",
+        "timestamp": 2312662.225215
+      }
+    },
+    {
+      "node_id": "delete_c2_traces_3",
+      "op_type": "FILE_DELETE",
+      "timestamp": 2312680.472607,
+      "duration_ms": 18.114311000332236,
+      "evidence": {
+        "type": "file_delete",
+        "path": "/sdcard/outbound_data/request_3.json",
+        "timestamp": 2312680.472607
+      }
+    },
+    {
+      "node_id": "delete_c2_traces_4",
+      "op_type": "FILE_DELETE",
+      "timestamp": 2312698.928693,
+      "duration_ms": 79.56675799982622,
+      "evidence": {
+        "type": "file_delete",
+        "path": "/sdcard/outbound_data/request_4.json",
+        "timestamp": 2312698.928693
+      }
+    }
+  ]
+}

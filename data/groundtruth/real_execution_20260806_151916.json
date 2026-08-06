@@ -1,0 +1,702 @@
+{
+  "scenario": "baseline_50.yaml",
+  "api_level": 31,
+  "device_serial": "emulator-5554",
+  "total_nodes": 50,
+  "total_layers": 48,
+  "total_time_seconds": 11.168528079986572,
+  "layer_times": [
+    0.11207365989685059,
+    0.1762089729309082,
+    0.19225502014160156,
+    0.18787050247192383,
+    0.20023345947265625,
+    0.20294570922851562,
+    0.2172994613647461,
+    0.5176467895507812,
+    0.3833811283111572,
+    0.6014745235443115,
+    0.46499085426330566,
+    0.4714622497558594,
+    0.5808703899383545,
+    0.43662118911743164,
+    0.5318927764892578,
+    0.05368947982788086,
+    0.03046870231628418,
+    0.03761029243469238,
+    0.03196597099304199,
+    0.031656503677368164,
+    0.031598567962646484,
+    0.036133527755737305,
+    0.09163546562194824,
+    0.1938626766204834,
+    0.20737171173095703,
+    0.1988518238067627,
+    0.20125842094421387,
+    0.20093345642089844,
+    0.046080827713012695,
+    0.048665523529052734,
+    0.04087376594543457,
+    0.07668352127075195,
+    0.05788278579711914,
+    0.010036706924438477,
+    0.01616215705871582,
+    0.03984355926513672,
+    0.015518426895141602,
+    0.019612789154052734,
+    0.018651485443115234,
+    0.01848888397216797,
+    0.3007643222808838,
+    0.17028164863586426,
+    2.7042014598846436,
+    0.02254199981689453,
+    0.23351430892944336,
+    0.24617409706115723,
+    0.3671998977661133,
+    0.09100914001464844
+  ],
+  "evidence": [
+    {
+      "node_id": "click_1",
+      "op_type": "UI_CLICK",
+      "timestamp": 6994664.850183,
+      "duration_ms": 110.33407399989665,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 100,
+          "y": 200,
+          "duration": 50
+        },
+        "timestamp": 6994664.850183
+      }
+    },
+    {
+      "node_id": "click_2",
+      "op_type": "UI_CLICK",
+      "timestamp": 6994775.545712,
+      "duration_ms": 175.8305210005492,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 300,
+          "y": 400,
+          "duration": 50
+        },
+        "timestamp": 6994775.545712
+      }
+    },
+    {
+      "node_id": "click_3",
+      "op_type": "UI_CLICK",
+      "timestamp": 6994951.791724,
+      "duration_ms": 191.85354300029576,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 200,
+          "y": 300,
+          "duration": 50
+        },
+        "timestamp": 6994951.791724
+      }
+    },
+    {
+      "node_id": "click_4",
+      "op_type": "UI_CLICK",
+      "timestamp": 6995144.078453,
+      "duration_ms": 187.44191499985754,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 150,
+          "y": 250,
+          "duration": 50
+        },
+        "timestamp": 6995144.078453
+      }
+    },
+    {
+      "node_id": "click_5",
+      "op_type": "UI_CLICK",
+      "timestamp": 6995331.909402,
+      "duration_ms": 199.83945799991488,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 500,
+          "y": 300,
+          "duration": 50
+        },
+        "timestamp": 6995331.909402
+      }
+    },
+    {
+      "node_id": "click_6",
+      "op_type": "UI_CLICK",
+      "timestamp": 6995532.167611,
+      "duration_ms": 202.50641699973494,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 400,
+          "y": 500,
+          "duration": 50
+        },
+        "timestamp": 6995532.167611
+      }
+    },
+    {
+      "node_id": "click_7",
+      "op_type": "UI_CLICK",
+      "timestamp": 6995735.135559,
+      "duration_ms": 216.78982600010931,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 250,
+          "y": 350,
+          "duration": 50
+        },
+        "timestamp": 6995735.135559
+      }
+    },
+    {
+      "node_id": "click_10",
+      "op_type": "UI_CLICK",
+      "timestamp": 6995953.177713,
+      "duration_ms": 190.74354400020093,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 550,
+          "y": 400,
+          "duration": 50
+        },
+        "timestamp": 6995953.177713
+      }
+    },
+    {
+      "node_id": "click_8",
+      "op_type": "UI_CLICK",
+      "timestamp": 6996145.354033,
+      "duration_ms": 201.06733900029212,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 350,
+          "y": 250,
+          "duration": 50
+        },
+        "timestamp": 6996145.354033
+      }
+    },
+    {
+      "node_id": "click_9",
+      "op_type": "UI_CLICK",
+      "timestamp": 6996346.784513,
+      "duration_ms": 122.85171599965543,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 450,
+          "y": 300,
+          "duration": 50
+        },
+        "timestamp": 6996346.784513
+      }
+    },
+    {
+      "node_id": "swipe_1",
+      "op_type": "UI_SWIPE",
+      "timestamp": 6996470.082649,
+      "duration_ms": 382.9434299999848,
+      "evidence": {
+        "type": "ui_swipe",
+        "coordinates": {
+          "x1": 100,
+          "y1": 500,
+          "x2": 300,
+          "y2": 500,
+          "duration": 300
+        },
+        "timestamp": 6996470.082649
+      }
+    },
+    {
+      "node_id": "swipe_2",
+      "op_type": "UI_SWIPE",
+      "timestamp": 6996853.440285,
+      "duration_ms": 601.0782709997147,
+      "evidence": {
+        "type": "ui_swipe",
+        "coordinates": {
+          "x1": 200,
+          "y1": 800,
+          "x2": 200,
+          "y2": 200,
+          "duration": 400
+        },
+        "timestamp": 6996853.440285
+      }
+    },
+    {
+      "node_id": "swipe_3",
+      "op_type": "UI_SWIPE",
+      "timestamp": 6997454.856759,
+      "duration_ms": 464.6654839999974,
+      "evidence": {
+        "type": "ui_swipe",
+        "coordinates": {
+          "x1": 100,
+          "y1": 300,
+          "x2": 500,
+          "y2": 300,
+          "duration": 300
+        },
+        "timestamp": 6997454.856759
+      }
+    },
+    {
+      "node_id": "swipe_4",
+      "op_type": "UI_SWIPE",
+      "timestamp": 6997919.842905,
+      "duration_ms": 471.11061799991876,
+      "evidence": {
+        "type": "ui_swipe",
+        "coordinates": {
+          "x1": 300,
+          "y1": 600,
+          "x2": 500,
+          "y2": 600,
+          "duration": 300
+        },
+        "timestamp": 6997919.842905
+      }
+    },
+    {
+      "node_id": "swipe_5",
+      "op_type": "UI_SWIPE",
+      "timestamp": 6998391.390059,
+      "duration_ms": 580.4631719999015,
+      "evidence": {
+        "type": "ui_swipe",
+        "coordinates": {
+          "x1": 100,
+          "y1": 100,
+          "x2": 400,
+          "y2": 800,
+          "duration": 500
+        },
+        "timestamp": 6998391.390059
+      }
+    },
+    {
+      "node_id": "swipe_6",
+      "op_type": "UI_SWIPE",
+      "timestamp": 6998972.194247,
+      "duration_ms": 436.22802700009197,
+      "evidence": {
+        "type": "ui_swipe",
+        "coordinates": {
+          "x1": 400,
+          "y1": 400,
+          "x2": 400,
+          "y2": 100,
+          "duration": 300
+        },
+        "timestamp": 6998972.194247
+      }
+    },
+    {
+      "node_id": "input_1",
+      "op_type": "UI_INPUT",
+      "timestamp": 6999408.866879,
+      "duration_ms": 531.5155879994854,
+      "evidence": {
+        "type": "ui_input",
+        "text_length": 12,
+        "timestamp": 6999408.866879
+      }
+    },
+    {
+      "node_id": "input_2",
+      "op_type": "UI_INPUT",
+      "timestamp": 6999940.702376,
+      "duration_ms": 53.40280700009316,
+      "evidence": {
+        "type": "ui_input",
+        "text_length": 12,
+        "timestamp": 6999940.702376
+      }
+    },
+    {
+      "node_id": "input_3",
+      "op_type": "UI_INPUT",
+      "timestamp": 6999994.37427,
+      "duration_ms": 30.185933000408113,
+      "evidence": {
+        "type": "ui_input",
+        "text_length": 12,
+        "timestamp": 6999994.37427
+      }
+    },
+    {
+      "node_id": "input_4",
+      "op_type": "UI_INPUT",
+      "timestamp": 7000024.98932,
+      "duration_ms": 37.18427100032568,
+      "evidence": {
+        "type": "ui_input",
+        "text_length": 12,
+        "timestamp": 7000024.98932
+      }
+    },
+    {
+      "node_id": "input_5",
+      "op_type": "UI_INPUT",
+      "timestamp": 7000062.461706,
+      "duration_ms": 31.68401399999857,
+      "evidence": {
+        "type": "ui_input",
+        "text_length": 12,
+        "timestamp": 7000062.461706
+      }
+    },
+    {
+      "node_id": "input_6",
+      "op_type": "UI_INPUT",
+      "timestamp": 7000094.412172,
+      "duration_ms": 31.39494200050831,
+      "evidence": {
+        "type": "ui_input",
+        "text_length": 12,
+        "timestamp": 7000094.412172
+      }
+    },
+    {
+      "node_id": "input_7",
+      "op_type": "UI_INPUT",
+      "timestamp": 7000126.078648,
+      "duration_ms": 31.31563299987465,
+      "evidence": {
+        "type": "ui_input",
+        "text_length": 12,
+        "timestamp": 7000126.078648
+      }
+    },
+    {
+      "node_id": "input_8",
+      "op_type": "UI_INPUT",
+      "timestamp": 7000157.686846,
+      "duration_ms": 35.843708999454975,
+      "evidence": {
+        "type": "ui_input",
+        "text_length": 12,
+        "timestamp": 7000157.686846
+      }
+    },
+    {
+      "node_id": "click_11",
+      "op_type": "UI_CLICK",
+      "timestamp": 7000193.818016,
+      "duration_ms": 91.30828899983317,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 200,
+          "y": 450,
+          "duration": 50
+        },
+        "timestamp": 7000193.818016
+      }
+    },
+    {
+      "node_id": "click_12",
+      "op_type": "UI_CLICK",
+      "timestamp": 7000285.514316,
+      "duration_ms": 193.47923699952662,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 600,
+          "y": 200,
+          "duration": 50
+        },
+        "timestamp": 7000285.514316
+      }
+    },
+    {
+      "node_id": "click_13",
+      "op_type": "UI_CLICK",
+      "timestamp": 7000479.342939,
+      "duration_ms": 206.92011200077832,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 300,
+          "y": 300,
+          "duration": 50
+        },
+        "timestamp": 7000479.342939
+      }
+    },
+    {
+      "node_id": "click_14",
+      "op_type": "UI_CLICK",
+      "timestamp": 7000686.845795,
+      "duration_ms": 198.33336600009352,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 400,
+          "y": 400,
+          "duration": 50
+        },
+        "timestamp": 7000686.845795
+      }
+    },
+    {
+      "node_id": "click_15",
+      "op_type": "UI_CLICK",
+      "timestamp": 7000885.701315,
+      "duration_ms": 200.79423600062728,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 500,
+          "y": 500,
+          "duration": 50
+        },
+        "timestamp": 7000885.701315
+      }
+    },
+    {
+      "node_id": "click_16",
+      "op_type": "UI_CLICK",
+      "timestamp": 7001086.826316,
+      "duration_ms": 200.59621900040656,
+      "evidence": {
+        "type": "ui_click",
+        "coordinates": {
+          "x": 250,
+          "y": 250,
+          "duration": 50
+        },
+        "timestamp": 7001086.826316
+      }
+    },
+    {
+      "node_id": "file_create_1",
+      "op_type": "FILE_CREATE",
+      "timestamp": 7001287.781661,
+      "duration_ms": 45.760661999695,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/test1.txt",
+        "timestamp": 7001287.781661
+      }
+    },
+    {
+      "node_id": "file_create_2",
+      "op_type": "FILE_CREATE",
+      "timestamp": 7001333.825014,
+      "duration_ms": 48.3461159998551,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/test2.txt",
+        "timestamp": 7001333.825014
+      }
+    },
+    {
+      "node_id": "file_create_3",
+      "op_type": "FILE_CREATE",
+      "timestamp": 7001382.510065,
+      "duration_ms": 40.31870499998331,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/test3.txt",
+        "timestamp": 7001382.510065
+      }
+    },
+    {
+      "node_id": "file_copy_1",
+      "op_type": "FILE_COPY",
+      "timestamp": 7001423.66922,
+      "duration_ms": 75.86427900008857,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/sdcard/test1.txt",
+        "dst": "/sdcard/test1_copy.txt",
+        "timestamp": 7001423.66922
+      }
+    },
+    {
+      "node_id": "file_copy_2",
+      "op_type": "FILE_COPY",
+      "timestamp": 7001500.354683,
+      "duration_ms": 57.30450800061226,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/sdcard/test2.txt",
+        "dst": "/sdcard/test2_copy.txt",
+        "timestamp": 7001500.354683
+      }
+    },
+    {
+      "node_id": "file_create_4",
+      "op_type": "FILE_CREATE",
+      "timestamp": 7001557.932071,
+      "duration_ms": 9.763750999234617,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/test4.txt",
+        "timestamp": 7001557.932071
+      }
+    },
+    {
+      "node_id": "file_create_5",
+      "op_type": "FILE_CREATE",
+      "timestamp": 7001567.948007,
+      "duration_ms": 15.878384999930859,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/test5.txt",
+        "timestamp": 7001567.948007
+      }
+    },
+    {
+      "node_id": "file_copy_3",
+      "op_type": "FILE_COPY",
+      "timestamp": 7001584.14703,
+      "duration_ms": 39.53014100063592,
+      "evidence": {
+        "type": "file_copy",
+        "src": "/sdcard/test3.txt",
+        "dst": "/sdcard/test3_copy.txt",
+        "timestamp": 7001584.14703
+      }
+    },
+    {
+      "node_id": "file_create_6",
+      "op_type": "FILE_CREATE",
+      "timestamp": 7001624.052391,
+      "duration_ms": 15.103663000278175,
+      "evidence": {
+        "type": "file_create",
+        "path": "/sdcard/test6.txt",
+        "timestamp": 7001624.052391
+      }
+    },
+    {
+      "node_id": "file_delete_1",
+      "op_type": "FILE_DELETE",
+      "timestamp": 7001639.567336,
+      "duration_ms": 19.253456000238657,
+      "evidence": {
+        "type": "file_delete",
+        "path": "/sdcard/test2.txt",
+        "timestamp": 7001639.567336
+      }
+    },
+    {
+      "node_id": "file_delete_2",
+      "op_type": "FILE_DELETE",
+      "timestamp": 7001659.123887,
+      "duration_ms": 18.351334000006318,
+      "evidence": {
+        "type": "file_delete",
+        "path": "/sdcard/test4.txt",
+        "timestamp": 7001659.123887
+      }
+    },
+    {
+      "node_id": "file_delete_3",
+      "op_type": "FILE_DELETE",
+      "timestamp": 7001677.78097,
+      "duration_ms": 18.172469000332057,
+      "evidence": {
+        "type": "file_delete",
+        "path": "/sdcard/test1_copy.txt",
+        "timestamp": 7001677.78097
+      }
+    },
+    {
+      "node_id": "app_start_1",
+      "op_type": "APP_START",
+      "timestamp": 7001696.308481,
+      "duration_ms": 300.37854299973696,
+      "evidence": {
+        "type": "app_start",
+        "package": "com.android.settings",
+        "timestamp": 7001696.308481
+      }
+    },
+    {
+      "node_id": "app_stop_1",
+      "op_type": "APP_STOP",
+      "timestamp": 7001997.062571,
+      "duration_ms": 169.92023899964988,
+      "evidence": {
+        "type": "app_stop",
+        "package": "com.android.settings",
+        "timestamp": 7001997.062571
+      }
+    },
+    {
+      "node_id": "app_stop_2",
+      "op_type": "APP_STOP",
+      "timestamp": 7004871.479735,
+      "duration_ms": 22.287634000182152,
+      "evidence": {
+        "type": "app_stop",
+        "package": "com.android.calculator2",
+        "timestamp": 7004871.479735
+      }
+    },
+    {
+      "node_id": "app_start_3",
+      "op_type": "APP_START",
+      "timestamp": 7004894.067304,
+      "duration_ms": 233.16986399982125,
+      "evidence": {
+        "type": "app_start",
+        "package": "com.android.dialer",
+        "timestamp": 7004894.067304
+      }
+    },
+    {
+      "node_id": "app_stop_3",
+      "op_type": "APP_STOP",
+      "timestamp": 7005127.622285,
+      "duration_ms": 245.80236299987882,
+      "evidence": {
+        "type": "app_stop",
+        "package": "com.android.dialer",
+        "timestamp": 7005127.622285
+      }
+    },
+    {
+      "node_id": "app_start_4",
+      "op_type": "APP_START",
+      "timestamp": 7005373.765207,
+      "duration_ms": 366.83449099957943,
+      "evidence": {
+        "type": "app_start",
+        "package": "com.android.chrome",
+        "timestamp": 7005373.765207
+      }
+    },
+    {
+      "node_id": "app_stop_4",
+      "op_type": "APP_STOP",
+      "timestamp": 7005741.06562,
+      "duration_ms": 90.60134100075811,
+      "evidence": {
+        "type": "app_stop",
+        "package": "com.android.chrome",
+        "timestamp": 7005741.06562
+      }
+    }
+  ]
+}

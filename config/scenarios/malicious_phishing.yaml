@@ -1,0 +1,274 @@
+name: "钓鱼登录场景"
+description: "模拟弹窗诱导用户输入账号密码并转发 (44原子)"
+api_level: 33
+
+nodes:
+  # === 阶段1: 初始导航 (8原子) ===
+  - id: click_1
+    type: UI_CLICK
+    params: {x: 540, y: 200}
+    estimated_cost: 0.5
+    depends_on: []
+  
+  - id: click_2
+    type: UI_CLICK
+    params: {x: 300, y: 400}
+    estimated_cost: 0.5
+    depends_on: [click_1]
+  
+  - id: swipe_1
+    type: UI_SWIPE
+    params: {x1: 100, y1: 600, x2: 300, y2: 600, duration: 300}
+    estimated_cost: 0.8
+    depends_on: [click_2]
+  
+  - id: click_3
+    type: UI_CLICK
+    params: {x: 200, y: 300}
+    estimated_cost: 0.5
+    depends_on: [swipe_1]
+  
+  - id: input_1
+    type: UI_INPUT
+    params: {text: "phishing_test"}
+    estimated_cost: 0.3
+    depends_on: [click_3]
+  
+  - id: click_4
+    type: UI_CLICK
+    params: {x: 400, y: 500}
+    estimated_cost: 0.5
+    depends_on: [input_1]
+  
+  - id: swipe_2
+    type: UI_SWIPE
+    params: {x1: 500, y1: 300, x2: 100, y2: 300, duration: 300}
+    estimated_cost: 0.8
+    depends_on: [click_4]
+  
+  - id: click_5
+    type: UI_CLICK
+    params: {x: 320, y: 450}
+    estimated_cost: 0.5
+    depends_on: [swipe_2]
+  
+  # === 阶段2: 伪造登录界面 (8原子) ===
+  - id: fake_login_start
+    type: UI_CLICK
+    params: {x: 540, y: 800}
+    estimated_cost: 0.5
+    depends_on: [click_5]
+  
+  - id: fake_username_field
+    type: UI_CLICK
+    params: {x: 540, y: 450}
+    estimated_cost: 0.5
+    depends_on: [fake_login_start]
+  
+  - id: input_username
+    type: UI_INPUT
+    params: {text: "victim_user_123"}
+    estimated_cost: 0.3
+    depends_on: [fake_username_field]
+  
+  - id: fake_password_field
+    type: UI_CLICK
+    params: {x: 540, y: 550}
+    estimated_cost: 0.5
+    depends_on: [input_username]
+  
+  - id: input_password
+    type: UI_INPUT
+    params: {text: "P@ssw0rd_2026"}
+    estimated_cost: 0.3
+    depends_on: [fake_password_field]
+  
+  - id: fake_login_button
+    type: UI_CLICK
+    params: {x: 540, y: 700}
+    estimated_cost: 0.5
+    depends_on: [input_password]
+  
+  - id: fake_2fa_field
+    type: UI_CLICK
+    params: {x: 540, y: 600}
+    estimated_cost: 0.5
+    depends_on: [fake_login_button]
+  
+  - id: input_2fa
+    type: UI_INPUT
+    params: {text: "123456"}
+    estimated_cost: 0.3
+    depends_on: [fake_2fa_field]
+  
+  # === 阶段3: 凭证捕获与记录 (14原子) ===
+  - id: capture_creds_1
+    type: FILE_CREATE
+    params: {path: "stolen_creds/credentials_1.txt", content: "USER: victim_user_123 PASS: P@ssw0rd_2026 2FA: 123456", is_media: false}
+    estimated_cost: 1.5
+    depends_on: [input_2fa]
+  
+  - id: capture_creds_2
+    type: FILE_CREATE
+    params: {path: "stolen_creds/credentials_2.txt", content: "TIMESTAMP: 2026-07-31T10:30:00", is_media: false}
+    estimated_cost: 1.0
+    depends_on: [input_2fa]
+  
+  - id: capture_creds_3
+    type: FILE_CREATE
+    params: {path: "stolen_creds/device_fingerprint.json", content: '{"model":"Pixel7","android_version":"15","screen":"1080x2400"}', is_media: false}
+    estimated_cost: 1.0
+    depends_on: [input_2fa]
+  
+  - id: capture_creds_4
+    type: FILE_CREATE
+    params: {path: "stolen_creds/network_info.json", content: '{"ip":"192.168.1.100","wifi":"Home_5G"}', is_media: false}
+    estimated_cost: 1.0
+    depends_on: [input_2fa]
+  
+  - id: capture_creds_5
+    type: FILE_CREATE
+    params: {path: "stolen_creds/target_apps.txt", content: "com.example.banking\ncom.example.social\ncom.example.email", is_media: false}
+    estimated_cost: 1.0
+    depends_on: [input_2fa]
+  
+  - id: capture_creds_6
+    type: FILE_CREATE
+    params: {path: "stolen_creds/session_tokens.txt", content: "SESSION: abc123def456\nREFRESH: xyz789uvw012", is_media: false}
+    estimated_cost: 1.0
+    depends_on: [input_2fa]
+  
+  - id: capture_creds_7
+    type: FILE_CREATE
+    params: {path: "stolen_creds/cookies.txt", content: "Cookie: _ga=GA1.2.12345; _gid=GA1.2.67890", is_media: false}
+    estimated_cost: 1.0
+    depends_on: [input_2fa]
+  
+  - id: encrypt_creds_1
+    type: FILE_COPY
+    params: {src: "stolen_creds/credentials_1.txt", dst: "stolen_creds/credentials_1.enc", is_media: false}
+    estimated_cost: 0.8
+    depends_on: [input_2fa]
+  
+  - id: encrypt_creds_2
+    type: FILE_COPY
+    params: {src: "stolen_creds/credentials_2.txt", dst: "stolen_creds/credentials_2.enc", is_media: false}
+    estimated_cost: 0.8
+    depends_on: [encrypt_creds_1]
+  
+  - id: encrypt_creds_3
+    type: FILE_COPY
+    params: {src: "stolen_creds/device_fingerprint.json", dst: "stolen_creds/device_fingerprint.enc", is_media: false}
+    estimated_cost: 0.8
+    depends_on: [encrypt_creds_2]
+  
+  - id: encrypt_creds_4
+    type: FILE_COPY
+    params: {src: "stolen_creds/session_tokens.txt", dst: "stolen_creds/session_tokens.enc", is_media: false}
+    estimated_cost: 0.8
+    depends_on: [encrypt_creds_3]
+  
+  - id: delete_plaintext_1
+    type: FILE_DELETE
+    params: {path: "stolen_creds/credentials_1.txt", is_media: false}
+    estimated_cost: 0.5
+    depends_on: [encrypt_creds_4]
+  
+  - id: delete_plaintext_2
+    type: FILE_DELETE
+    params: {path: "stolen_creds/credentials_2.txt", is_media: false}
+    estimated_cost: 0.5
+    depends_on: [delete_plaintext_1]
+  
+  - id: delete_plaintext_3
+    type: FILE_DELETE
+    params: {path: "stolen_creds/device_fingerprint.json", is_media: false}
+    estimated_cost: 0.5
+    depends_on: [delete_plaintext_2]
+  
+  # === 阶段4: 转发至C2服务器模拟 (8原子) ===
+  - id: exfil_ready_flag
+    type: FILE_CREATE
+    params: {path: "stolen_creds/READY_TO_EXFIL.flag", content: "ALL_CREDENTIALS_ENCRYPTED", is_media: false}
+    estimated_cost: 0.3
+    depends_on: [delete_plaintext_3]
+  
+  - id: c2_prepare
+    type: FILE_CREATE
+    params: {path: "outbound_data/request_1.json", content: '{"cmd":"upload","file":"creds.enc"}', is_media: false}
+    estimated_cost: 0.8
+    depends_on: [exfil_ready_flag]
+  
+  - id: c2_transmit_1
+    type: FILE_CREATE
+    params: {path: "outbound_data/request_2.json", content: '{"chunk":1,"data":"BASE64_ENCODED_CHUNK_1"}', is_media: false}
+    estimated_cost: 0.8
+    depends_on: [c2_prepare]
+  
+  - id: c2_transmit_2
+    type: FILE_CREATE
+    params: {path: "outbound_data/request_3.json", content: '{"chunk":2,"data":"BASE64_ENCODED_CHUNK_2"}', is_media: false}
+    estimated_cost: 0.8
+    depends_on: [c2_transmit_1]
+  
+  - id: c2_transmit_3
+    type: FILE_CREATE
+    params: {path: "outbound_data/request_4.json", content: '{"chunk":3,"data":"BASE64_ENCODED_CHUNK_3"}', is_media: false}
+    estimated_cost: 0.8
+    depends_on: [c2_transmit_2]
+  
+  - id: c2_transmit_4
+    type: FILE_CREATE
+    params: {path: "outbound_data/request_5.json", content: '{"chunk":4,"data":"BASE64_ENCODED_CHUNK_4"}', is_media: false}
+    estimated_cost: 0.8
+    depends_on: [c2_transmit_3]
+  
+  - id: c2_finalize
+    type: FILE_CREATE
+    params: {path: "outbound_data/request_final.json", content: '{"status":"complete","total_chunks":4}', is_media: false}
+    estimated_cost: 0.8
+    depends_on: [c2_transmit_4]
+  
+  - id: phishing_complete
+    type: FILE_CREATE
+    params: {path: "PHISHING_COMPLETE.flag", content: "ALL_DATA_EXFILTRATED", is_media: false}
+    estimated_cost: 0.3
+    depends_on: [c2_finalize]
+  
+  # === 阶段5: 清理痕迹 (4原子) ===
+  - id: delete_c2_traces_1
+    type: FILE_DELETE
+    params: {path: "outbound_data/request_1.json", is_media: false}
+    estimated_cost: 0.4
+    depends_on: [phishing_complete]
+  
+  - id: delete_c2_traces_2
+    type: FILE_DELETE
+    params: {path: "outbound_data/request_2.json", is_media: false}
+    estimated_cost: 0.4
+    depends_on: [delete_c2_traces_1]
+  
+  - id: delete_c2_traces_3
+    type: FILE_DELETE
+    params: {path: "outbound_data/request_3.json", is_media: false}
+    estimated_cost: 0.4
+    depends_on: [delete_c2_traces_2]
+  
+  - id: delete_c2_traces_4
+    type: FILE_DELETE
+    params: {path: "outbound_data/request_4.json", is_media: false}
+    estimated_cost: 0.4
+    depends_on: [delete_c2_traces_3]
+  
+  # 清理痕迹 (2个)
+  - id: delete_traces_1
+    type: FILE_DELETE
+    params: {path: "stolen_creds/READY_TO_EXFIL.flag", is_media: false}
+    estimated_cost: 0.3
+    depends_on: [phishing_complete]
+  
+  - id: delete_traces_2
+    type: FILE_DELETE
+    params: {path: "PHISHING_COMPLETE.flag", is_media: false}
+    estimated_cost: 0.3
+    depends_on: [delete_traces_1]
