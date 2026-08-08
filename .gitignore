@@ -9,3 +9,10 @@ venv/
 .idea/
 *.pkl
 *.db
+
+# 论文插图（已插入正文，不入仓库）
+fig*.pdf
+fig*.png
+plot_*.py
+test_tikz/
+figures/
