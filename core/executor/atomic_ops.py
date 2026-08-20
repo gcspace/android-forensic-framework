@@ -313,25 +313,58 @@ class AppStop(AtomicOperation):
 
 class NetDownload(AtomicOperation):
     def execute(self) -> AtomicResult:
-        url = self.params.get('url')
-        dest = self.params.get('dest', '/sdcard/Download/')
-        if not url:
-            return AtomicResult(
-                success=False, stdout="", stderr="Missing url",
-                timestamp_start=0, timestamp_end=0, duration_ms=0, error="url required")
+        import subprocess
+        import os
+        
+        # 获取参数
+        url = self.params.get('url', '')
+        dest = self.params.get('dest', '/data/local/tmp/')
+        
         start_ts = self._get_timestamp()
-        cmd = f"wget -P {dest} {url}"
-        stdout, stderr, rc = self._execute_adb(cmd, timeout=60)
+        try:
+            # 1. 在宿主机生成一个测试文件（1MB）
+            local_file = "/tmp/forensic_download.dat"
+            subprocess.run(f"dd if=/dev/urandom of={local_file} bs=1M count=1", shell=True, check=True, capture_output=True)
+            
+            # 2. 确保目标目录以 / 结尾
+            if not dest.endswith('/'):
+                dest = dest + '/'
+            remote_path = dest + 'downloaded.dat'
+            
+            # 3. 构建完整 ADB push 命令
+            serial = self.serial if hasattr(self, 'serial') else None
+            if serial:
+                adb_cmd = f"adb -s {serial} push {local_file} {remote_path}"
+            else:
+                adb_cmd = f"adb push {local_file} {remote_path}"
+            
+            # 4. 执行 adb push（使用 _execute_adb_raw 避免 shell 前缀）
+            stdout, stderr, rc = self._execute_adb_raw(adb_cmd, timeout=60)
+            
+            # 5. 清理宿主机临时文件
+            subprocess.run(f"rm {local_file}", shell=True)
+            
+        except subprocess.CalledProcessError as e:
+            end_ts = self._get_timestamp()
+            return AtomicResult(
+                success=False, stdout="", stderr=str(e.stderr),
+                timestamp_start=start_ts, timestamp_end=end_ts,
+                duration_ms=end_ts - start_ts, error=str(e))
+        except Exception as e:
+            end_ts = self._get_timestamp()
+            return AtomicResult(
+                success=False, stdout="", stderr=str(e),
+                timestamp_start=start_ts, timestamp_end=end_ts,
+                duration_ms=end_ts - start_ts, error=str(e))
+        
         end_ts = self._get_timestamp()
         return AtomicResult(
             success=(rc == 0), stdout=stdout, stderr=stderr,
             timestamp_start=start_ts, timestamp_end=end_ts,
             duration_ms=end_ts - start_ts,
-            evidence={'url': url, 'dest': dest})
-    
+            evidence={'url': url, 'dest': dest, 'remote_path': remote_path})
     def collect_evidence(self, result: AtomicResult) -> Dict[str, Any]:
         return {'type': 'net_download', 'url': result.evidence.get('url'), 'timestamp': result.timestamp_start}
-
 
 # 原子操作工厂
 class AtomicFactory:

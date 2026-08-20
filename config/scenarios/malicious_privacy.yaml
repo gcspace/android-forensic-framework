@@ -226,7 +226,7 @@ nodes:
   # === 阶段5: 打包存储至应用私有目录 (12原子) ===
   - id: package_create_dir
     type: FILE_CREATE
-    params: {path: "private_stolen_data/", content: "", is_media: false}
+    params: {path: "private_stolen_data", content: "", is_media: false}
     estimated_cost: 0.5
     depends_on: [app_data_2]
   

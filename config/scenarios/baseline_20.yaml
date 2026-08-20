@@ -122,6 +122,6 @@ nodes:
   
   - id: app_start_2
     type: APP_START
-    params: {package: "com.android.calculator2"}
+    params: {package: "com.android.settings"}
     estimated_cost: 2.0
     depends_on: [app_stop_1]

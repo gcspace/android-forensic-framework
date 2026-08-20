@@ -143,12 +143,24 @@ nodes:
     params: {path: "stolen_creds/cookies.txt", content: "Cookie: _ga=GA1.2.12345; _gid=GA1.2.67890", is_media: false}
     estimated_cost: 1.0
     depends_on: [input_2fa]
+
+  - id: create_credentials_1
+    type: FILE_CREATE
+    params: {path: "stolen_creds/credentials_1.txt", content: "username: victim@example.com\npassword: SecurePass123", is_media: false}
+    estimated_cost: 1.0
+    depends_on: [input_2fa]
+  
+  - id: create_credentials_2
+    type: FILE_CREATE
+    params: {path: "stolen_creds/credentials_2.txt", content: "username: victim2@example.com\npassword: AnotherPass456", is_media: false}
+    estimated_cost: 1.0
+    depends_on: [create_credentials_1]
   
   - id: encrypt_creds_1
     type: FILE_COPY
     params: {src: "stolen_creds/credentials_1.txt", dst: "stolen_creds/credentials_1.enc", is_media: false}
     estimated_cost: 0.8
-    depends_on: [input_2fa]
+    depends_on: [create_credentials_1]
   
   - id: encrypt_creds_2
     type: FILE_COPY

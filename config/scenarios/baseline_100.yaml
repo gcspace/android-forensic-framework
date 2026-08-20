@@ -499,25 +499,25 @@ nodes:
   
   - id: app_start_2
     type: APP_START
-    params: {package: "com.android.calculator2"}
+    params: {package: "com.android.settings"}
     estimated_cost: 1.8
     depends_on: [app_stop_1]
   
   - id: app_stop_2
     type: APP_STOP
-    params: {package: "com.android.calculator2"}
+    params: {package: "com.android.settings"}
     estimated_cost: 0.4
     depends_on: [app_start_2]
   
   - id: app_start_3
     type: APP_START
-    params: {package: "com.android.dialer"}
+    params: {package: "com.android.chrome"}
     estimated_cost: 1.8
     depends_on: [app_stop_2]
   
   - id: app_stop_3
     type: APP_STOP
-    params: {package: "com.android.dialer"}
+    params: {package: "com.android.chrome"}
     estimated_cost: 0.4
     depends_on: [app_start_3]
   
@@ -535,49 +535,49 @@ nodes:
   
   - id: app_start_5
     type: APP_START
-    params: {package: "com.android.messaging"}
+    params: {package: "com.android.settings"}
     estimated_cost: 1.8
     depends_on: [app_stop_4]
   
   - id: app_stop_5
     type: APP_STOP
-    params: {package: "com.android.messaging"}
+    params: {package: "com.android.settings"}
     estimated_cost: 0.4
     depends_on: [app_start_5]
   
   - id: app_start_6
     type: APP_START
-    params: {package: "com.android.gallery3d"}
+    params: {package: "com.android.settings"}
     estimated_cost: 1.8
     depends_on: [app_stop_5]
   
   - id: app_stop_6
     type: APP_STOP
-    params: {package: "com.android.gallery3d"}
+    params: {package: "com.android.settings"}
     estimated_cost: 0.4
     depends_on: [app_start_6]
   
   - id: app_start_7
     type: APP_START
-    params: {package: "com.android.contacts"}
+    params: {package: "com.google.android.contacts"}
     estimated_cost: 1.8
     depends_on: [app_stop_6]
   
   - id: app_stop_7
     type: APP_STOP
-    params: {package: "com.android.contacts"}
+    params: {package: "com.google.android.contacts"}
     estimated_cost: 0.4
     depends_on: [app_start_7]
   
   - id: app_start_8
     type: APP_START
-    params: {package: "com.android.clock"}
+    params: {package: "com.google.android.deskclock"}
     estimated_cost: 1.8
     depends_on: [app_stop_7]
   
   - id: app_stop_8
     type: APP_STOP
-    params: {package: "com.android.clock"}
+    params: {package: "com.google.android.deskclock"}
     estimated_cost: 0.4
     depends_on: [app_start_8]
   
