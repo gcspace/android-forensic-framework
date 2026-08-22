@@ -16,3 +16,9 @@ fig*.png
 plot_*.py
 test_tikz/
 figures/
+
+# Backup files
+*.bak
+*.backup
+*.backup_*
+*~
