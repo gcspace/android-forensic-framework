@@ -113,7 +113,7 @@ class PriorityScheduler:
         remaining = set(dag.get_all_nodes())
         
         while ready_queue and remaining:
-            layer_size = min(len(ready_queue), self.W)
+            layer_size = len(ready_queue)  # 每层执行所有就绪原子，不受 W 限制
             current_layer = ready_queue[:layer_size]
             ready_queue = ready_queue[layer_size:]
             plan.add_layer(current_layer)

@@ -1,0 +1,633 @@
+name: "增强型高并行场景（120原子，12层×10原子）"
+description: "每层10原子（5 APP_START + 5 FILE_CREATE），持续12层，所有层都 > W=8"
+api_level: 33
+
+nodes:
+  # ============================================================
+  # 层1：10个原子（DAG起点，全部无依赖）
+  # ============================================================
+  - id: l1_app_1
+    type: APP_START
+    params: {package: "com.android.settings"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l1_app_2
+    type: APP_START
+    params: {package: "com.google.android.deskclock"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l1_app_3
+    type: APP_START
+    params: {package: "com.google.android.contacts"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l1_app_4
+    type: APP_START
+    params: {package: "com.google.android.calendar"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l1_app_5
+    type: APP_START
+    params: {package: "com.google.android.apps.youtube.music"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l1_file_1
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f1.txt", content: "l1", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l1_file_2
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f2.txt", content: "l1", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l1_file_3
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f3.txt", content: "l1", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l1_file_4
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f4.txt", content: "l1", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l1_file_5
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f5.txt", content: "l1", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+
+  # ============================================================
+  # 层2-12：每层10个原子（2个关键路径APP_START + 3个非关键APP_START + 5个FILE_CREATE）
+  # ============================================================
+  # 层2
+  - id: l2_app_1
+    type: APP_START
+    params: {package: "com.android.settings"}
+    estimated_cost: 1.5
+    depends_on: [l1_app_1]
+  - id: l2_app_2
+    type: APP_START
+    params: {package: "com.google.android.deskclock"}
+    estimated_cost: 1.5
+    depends_on: [l1_app_2]
+  - id: l2_app_3
+    type: APP_START
+    params: {package: "com.google.android.contacts"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l2_app_4
+    type: APP_START
+    params: {package: "com.google.android.calendar"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l2_app_5
+    type: APP_START
+    params: {package: "com.google.android.apps.youtube.music"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l2_file_1
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f6.txt", content: "l2", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l2_file_2
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f7.txt", content: "l2", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l2_file_3
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f8.txt", content: "l2", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l2_file_4
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f9.txt", content: "l2", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l2_file_5
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f10.txt", content: "l2", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+
+  # 层3
+  - id: l3_app_1
+    type: APP_START
+    params: {package: "com.google.android.contacts"}
+    estimated_cost: 1.5
+    depends_on: [l2_app_1]
+  - id: l3_app_2
+    type: APP_START
+    params: {package: "com.google.android.calendar"}
+    estimated_cost: 1.5
+    depends_on: [l2_app_2]
+  - id: l3_app_3
+    type: APP_START
+    params: {package: "com.google.android.apps.youtube.music"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l3_app_4
+    type: APP_START
+    params: {package: "com.android.settings"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l3_app_5
+    type: APP_START
+    params: {package: "com.google.android.deskclock"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l3_file_1
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f11.txt", content: "l3", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l3_file_2
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f12.txt", content: "l3", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l3_file_3
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f13.txt", content: "l3", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l3_file_4
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f14.txt", content: "l3", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l3_file_5
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f15.txt", content: "l3", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+
+  # 层4
+  - id: l4_app_1
+    type: APP_START
+    params: {package: "com.google.android.apps.youtube.music"}
+    estimated_cost: 1.5
+    depends_on: [l3_app_1]
+  - id: l4_app_2
+    type: APP_START
+    params: {package: "com.android.settings"}
+    estimated_cost: 1.5
+    depends_on: [l3_app_2]
+  - id: l4_app_3
+    type: APP_START
+    params: {package: "com.google.android.deskclock"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l4_app_4
+    type: APP_START
+    params: {package: "com.google.android.contacts"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l4_app_5
+    type: APP_START
+    params: {package: "com.google.android.calendar"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l4_file_1
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f16.txt", content: "l4", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l4_file_2
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f17.txt", content: "l4", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l4_file_3
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f18.txt", content: "l4", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l4_file_4
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f19.txt", content: "l4", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l4_file_5
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f20.txt", content: "l4", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+
+  # 层5
+  - id: l5_app_1
+    type: APP_START
+    params: {package: "com.google.android.deskclock"}
+    estimated_cost: 1.5
+    depends_on: [l4_app_1]
+  - id: l5_app_2
+    type: APP_START
+    params: {package: "com.google.android.contacts"}
+    estimated_cost: 1.5
+    depends_on: [l4_app_2]
+  - id: l5_app_3
+    type: APP_START
+    params: {package: "com.google.android.calendar"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l5_app_4
+    type: APP_START
+    params: {package: "com.google.android.apps.youtube.music"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l5_app_5
+    type: APP_START
+    params: {package: "com.android.settings"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l5_file_1
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f21.txt", content: "l5", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l5_file_2
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f22.txt", content: "l5", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l5_file_3
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f23.txt", content: "l5", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l5_file_4
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f24.txt", content: "l5", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l5_file_5
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f25.txt", content: "l5", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+
+  # 层6
+  - id: l6_app_1
+    type: APP_START
+    params: {package: "com.google.android.calendar"}
+    estimated_cost: 1.5
+    depends_on: [l5_app_1]
+  - id: l6_app_2
+    type: APP_START
+    params: {package: "com.google.android.apps.youtube.music"}
+    estimated_cost: 1.5
+    depends_on: [l5_app_2]
+  - id: l6_app_3
+    type: APP_START
+    params: {package: "com.android.settings"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l6_app_4
+    type: APP_START
+    params: {package: "com.google.android.deskclock"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l6_app_5
+    type: APP_START
+    params: {package: "com.google.android.contacts"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l6_file_1
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f26.txt", content: "l6", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l6_file_2
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f27.txt", content: "l6", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l6_file_3
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f28.txt", content: "l6", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l6_file_4
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f29.txt", content: "l6", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l6_file_5
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f30.txt", content: "l6", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+
+  # 层7
+  - id: l7_app_1
+    type: APP_START
+    params: {package: "com.android.settings"}
+    estimated_cost: 1.5
+    depends_on: [l6_app_1]
+  - id: l7_app_2
+    type: APP_START
+    params: {package: "com.google.android.deskclock"}
+    estimated_cost: 1.5
+    depends_on: [l6_app_2]
+  - id: l7_app_3
+    type: APP_START
+    params: {package: "com.google.android.contacts"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l7_app_4
+    type: APP_START
+    params: {package: "com.google.android.calendar"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l7_app_5
+    type: APP_START
+    params: {package: "com.google.android.apps.youtube.music"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l7_file_1
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f31.txt", content: "l7", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l7_file_2
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f32.txt", content: "l7", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l7_file_3
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f33.txt", content: "l7", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l7_file_4
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f34.txt", content: "l7", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l7_file_5
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f35.txt", content: "l7", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+
+  # 层8
+  - id: l8_app_1
+    type: APP_START
+    params: {package: "com.google.android.contacts"}
+    estimated_cost: 1.5
+    depends_on: [l7_app_1]
+  - id: l8_app_2
+    type: APP_START
+    params: {package: "com.google.android.calendar"}
+    estimated_cost: 1.5
+    depends_on: [l7_app_2]
+  - id: l8_app_3
+    type: APP_START
+    params: {package: "com.google.android.apps.youtube.music"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l8_app_4
+    type: APP_START
+    params: {package: "com.android.settings"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l8_app_5
+    type: APP_START
+    params: {package: "com.google.android.deskclock"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l8_file_1
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f36.txt", content: "l8", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l8_file_2
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f37.txt", content: "l8", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l8_file_3
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f38.txt", content: "l8", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l8_file_4
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f39.txt", content: "l8", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l8_file_5
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f40.txt", content: "l8", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+
+  # 层9
+  - id: l9_app_1
+    type: APP_START
+    params: {package: "com.google.android.deskclock"}
+    estimated_cost: 1.5
+    depends_on: [l8_app_1]
+  - id: l9_app_2
+    type: APP_START
+    params: {package: "com.google.android.contacts"}
+    estimated_cost: 1.5
+    depends_on: [l8_app_2]
+  - id: l9_app_3
+    type: APP_START
+    params: {package: "com.google.android.calendar"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l9_app_4
+    type: APP_START
+    params: {package: "com.google.android.apps.youtube.music"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l9_app_5
+    type: APP_START
+    params: {package: "com.android.settings"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l9_file_1
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f41.txt", content: "l9", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l9_file_2
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f42.txt", content: "l9", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l9_file_3
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f43.txt", content: "l9", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l9_file_4
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f44.txt", content: "l9", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l9_file_5
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f45.txt", content: "l9", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+
+  # 层10
+  - id: l10_app_1
+    type: APP_START
+    params: {package: "com.google.android.calendar"}
+    estimated_cost: 1.5
+    depends_on: [l9_app_1]
+  - id: l10_app_2
+    type: APP_START
+    params: {package: "com.google.android.apps.youtube.music"}
+    estimated_cost: 1.5
+    depends_on: [l9_app_2]
+  - id: l10_app_3
+    type: APP_START
+    params: {package: "com.android.settings"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l10_app_4
+    type: APP_START
+    params: {package: "com.google.android.deskclock"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l10_app_5
+    type: APP_START
+    params: {package: "com.google.android.contacts"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l10_file_1
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f46.txt", content: "l10", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l10_file_2
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f47.txt", content: "l10", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l10_file_3
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f48.txt", content: "l10", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l10_file_4
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f49.txt", content: "l10", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l10_file_5
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f50.txt", content: "l10", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+
+  # 层11
+  - id: l11_app_1
+    type: APP_START
+    params: {package: "com.android.settings"}
+    estimated_cost: 1.5
+    depends_on: [l10_app_1]
+  - id: l11_app_2
+    type: APP_START
+    params: {package: "com.google.android.deskclock"}
+    estimated_cost: 1.5
+    depends_on: [l10_app_2]
+  - id: l11_app_3
+    type: APP_START
+    params: {package: "com.google.android.contacts"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l11_app_4
+    type: APP_START
+    params: {package: "com.google.android.calendar"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l11_app_5
+    type: APP_START
+    params: {package: "com.google.android.apps.youtube.music"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l11_file_1
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f51.txt", content: "l11", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l11_file_2
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f52.txt", content: "l11", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l11_file_3
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f53.txt", content: "l11", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l11_file_4
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f54.txt", content: "l11", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l11_file_5
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f55.txt", content: "l11", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+
+  # 层12（出口层）
+  - id: l12_app_1
+    type: APP_START
+    params: {package: "com.google.android.contacts"}
+    estimated_cost: 1.5
+    depends_on: [l11_app_1]
+  - id: l12_app_2
+    type: APP_START
+    params: {package: "com.google.android.calendar"}
+    estimated_cost: 1.5
+    depends_on: [l11_app_2]
+  - id: l12_app_3
+    type: APP_START
+    params: {package: "com.google.android.apps.youtube.music"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l12_app_4
+    type: APP_START
+    params: {package: "com.android.settings"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l12_app_5
+    type: APP_START
+    params: {package: "com.google.android.deskclock"}
+    estimated_cost: 1.5
+    depends_on: []
+  - id: l12_file_1
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f56.txt", content: "l12", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l12_file_2
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f57.txt", content: "l12", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l12_file_3
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f58.txt", content: "l12", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l12_file_4
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f59.txt", content: "l12", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
+  - id: l12_file_5
+    type: FILE_CREATE
+    params: {path: "/data/local/tmp/hp120/f60.txt", content: "l12", is_media: false}
+    estimated_cost: 0.5
+    depends_on: []
