@@ -1,0 +1,334 @@
+{
+  "total_nodes": 36,
+  "total_layers": 29,
+  "total_time": 2.289139747619629,
+  "scheduler": "priority",
+  "max_concurrency": 6,
+  "timestamp": "2026-08-22T16:17:25.453863",
+  "atoms": [
+    {
+      "id": "click_1",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 25.32496999949217,
+      "timestamp_start": 18828458.510059,
+      "timestamp_end": 18828483.835029,
+      "error": null
+    },
+    {
+      "id": "click_2",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 24.54015700146556,
+      "timestamp_start": 18828484.112783,
+      "timestamp_end": 18828508.65294,
+      "error": null
+    },
+    {
+      "id": "swipe_1",
+      "op_type": "UI_SWIPE",
+      "success": true,
+      "duration_ms": 378.81065199896693,
+      "timestamp_start": 18828508.957646,
+      "timestamp_end": 18828887.768298,
+      "error": null
+    },
+    {
+      "id": "click_3",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 150.12380299717188,
+      "timestamp_start": 18828888.149454,
+      "timestamp_end": 18829038.273257,
+      "error": null
+    },
+    {
+      "id": "input_1",
+      "op_type": "UI_INPUT",
+      "success": true,
+      "duration_ms": 356.484593000263,
+      "timestamp_start": 18829038.526685,
+      "timestamp_end": 18829395.011278,
+      "error": null
+    },
+    {
+      "id": "click_4",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 43.828581999987364,
+      "timestamp_start": 18829395.507625,
+      "timestamp_end": 18829439.336207,
+      "error": null
+    },
+    {
+      "id": "swipe_2",
+      "op_type": "UI_SWIPE",
+      "success": true,
+      "duration_ms": 438.47319800034165,
+      "timestamp_start": 18829439.630119,
+      "timestamp_end": 18829878.103317,
+      "error": null
+    },
+    {
+      "id": "click_5",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 25.70728800073266,
+      "timestamp_start": 18829878.393538,
+      "timestamp_end": 18829904.100826,
+      "error": null
+    },
+    {
+      "id": "input_2",
+      "op_type": "UI_INPUT",
+      "success": true,
+      "duration_ms": 38.38628199696541,
+      "timestamp_start": 18829904.40652,
+      "timestamp_end": 18829942.792802,
+      "error": null
+    },
+    {
+      "id": "click_6",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 24.132789000868797,
+      "timestamp_start": 18829943.100433,
+      "timestamp_end": 18829967.233222,
+      "error": null
+    },
+    {
+      "id": "sms_access_8",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 28.699952002614737,
+      "timestamp_start": 18829967.60637,
+      "timestamp_end": 18829996.306322,
+      "error": null
+    },
+    {
+      "id": "sms_access_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 29.81921599805355,
+      "timestamp_start": 18829996.565547,
+      "timestamp_end": 18830026.384763,
+      "error": null
+    },
+    {
+      "id": "sms_access_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 28.99456600099802,
+      "timestamp_start": 18830026.659165,
+      "timestamp_end": 18830055.653731,
+      "error": null
+    },
+    {
+      "id": "sms_access_3",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 28.829592000693083,
+      "timestamp_start": 18830055.913452,
+      "timestamp_end": 18830084.743044,
+      "error": null
+    },
+    {
+      "id": "sms_access_4",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 29.861876998096704,
+      "timestamp_start": 18830084.983065,
+      "timestamp_end": 18830114.844942,
+      "error": null
+    },
+    {
+      "id": "sms_access_5",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 28.620634000748396,
+      "timestamp_start": 18830115.086674,
+      "timestamp_end": 18830143.707308,
+      "error": null
+    },
+    {
+      "id": "sms_access_6",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 29.752585999667645,
+      "timestamp_start": 18830143.985477,
+      "timestamp_end": 18830173.738063,
+      "error": null
+    },
+    {
+      "id": "sms_access_7",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 28.617757000029087,
+      "timestamp_start": 18830174.048425,
+      "timestamp_end": 18830202.666182,
+      "error": null
+    },
+    {
+      "id": "photo_access_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 29.315023001283407,
+      "timestamp_start": 18830203.019883,
+      "timestamp_end": 18830232.334906,
+      "error": null
+    },
+    {
+      "id": "photo_access_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 29.610718000680208,
+      "timestamp_start": 18830232.61404,
+      "timestamp_end": 18830262.224758,
+      "error": null
+    },
+    {
+      "id": "photo_access_3",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 31.431272998452187,
+      "timestamp_start": 18830262.535371,
+      "timestamp_end": 18830293.966644,
+      "error": null
+    },
+    {
+      "id": "photo_access_4",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 31.08848100155592,
+      "timestamp_start": 18830294.413388,
+      "timestamp_end": 18830325.501869,
+      "error": null
+    },
+    {
+      "id": "photo_access_5",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 28.547010999172926,
+      "timestamp_start": 18830325.795299,
+      "timestamp_end": 18830354.34231,
+      "error": null
+    },
+    {
+      "id": "photo_access_6",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 28.61405900120735,
+      "timestamp_start": 18830354.64218,
+      "timestamp_end": 18830383.256239,
+      "error": null
+    },
+    {
+      "id": "photo_access_7",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 27.989455997943878,
+      "timestamp_start": 18830383.581946,
+      "timestamp_end": 18830411.571402,
+      "error": null
+    },
+    {
+      "id": "photo_access_8",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 30.78278800100088,
+      "timestamp_start": 18830411.865525,
+      "timestamp_end": 18830442.648313,
+      "error": null
+    },
+    {
+      "id": "browser_cache_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 30.76501700282097,
+      "timestamp_start": 18830442.986252,
+      "timestamp_end": 18830473.751269,
+      "error": null
+    },
+    {
+      "id": "browser_cache_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 28.722589999437332,
+      "timestamp_start": 18830474.097699,
+      "timestamp_end": 18830502.820289,
+      "error": null
+    },
+    {
+      "id": "browser_cache_3",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 30.232955999672413,
+      "timestamp_start": 18830503.147247,
+      "timestamp_end": 18830533.380203,
+      "error": null
+    },
+    {
+      "id": "browser_cache_4",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 34.18061799928546,
+      "timestamp_start": 18830533.713246,
+      "timestamp_end": 18830567.893864,
+      "error": null
+    },
+    {
+      "id": "browser_cache_5",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 29.347872000187635,
+      "timestamp_start": 18830568.280492,
+      "timestamp_end": 18830597.628364,
+      "error": null
+    },
+    {
+      "id": "browser_cache_6",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 28.565744999796152,
+      "timestamp_start": 18830597.973192,
+      "timestamp_end": 18830626.538937,
+      "error": null
+    },
+    {
+      "id": "browser_cache_7",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 28.907290998846292,
+      "timestamp_start": 18830626.869405,
+      "timestamp_end": 18830655.776696,
+      "error": null
+    },
+    {
+      "id": "browser_cache_8",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 28.52182599902153,
+      "timestamp_start": 18830656.097695,
+      "timestamp_end": 18830684.619521,
+      "error": null
+    },
+    {
+      "id": "app_data_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 28.935332000255585,
+      "timestamp_start": 18830685.100439,
+      "timestamp_end": 18830714.035771,
+      "error": null
+    },
+    {
+      "id": "app_data_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 31.241218000650406,
+      "timestamp_start": 18830714.41982,
+      "timestamp_end": 18830745.661038,
+      "error": null
+    }
+  ]
+}
