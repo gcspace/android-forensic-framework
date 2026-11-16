@@ -1,0 +1,17 @@
+{
+  "api": 29,
+  "branch": "legacy_optout",
+  "adapter": "on",
+  "policy_target": "/sdcard/Download",
+  "expected": 6,
+  "found": 6,
+  "missing": [],
+  "deleted_in_scenario": 3,
+  "loss_rate": 0.0,
+  "files_deleted_in_scenario": [
+    "/sdcard/Download/test1_copy.txt",
+    "/sdcard/Download/test2.txt",
+    "/sdcard/Download/test4.txt"
+  ],
+  "timestamp": "2026-11-14T17:19:11.121262"
+}

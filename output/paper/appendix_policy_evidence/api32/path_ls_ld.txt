@@ -1,0 +1,5 @@
+ls: /data/media/0: Permission denied
+ls: /mnt/user/0/primary: Permission denied
+lrw-r--r--  1 root     root       21 2024-02-08 07:23 /sdcard -> /storage/self/primary
+drwxrwx---  4 media_rw media_rw 4096 2026-11-13 01:57 /storage/emulated
+drwxrws--- 17 media_rw media_rw 4096 2026-11-14 17:32 /storage/emulated/0

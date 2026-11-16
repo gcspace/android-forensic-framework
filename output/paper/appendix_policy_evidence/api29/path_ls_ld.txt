@@ -1,0 +1,5 @@
+ls: /data/media/0: Permission denied
+lrwxrwxrwx  1 root root        19 2026-11-15 22:33 /mnt/user/0/primary -> /storage/emulated/0
+lrw-r--r--  1 root root        21 2025-02-28 05:34 /sdcard -> /storage/self/primary
+drwx--x--x  3 root sdcard_rw 4096 2026-11-15 22:33 /storage/emulated
+drwxrwx--x 13 root sdcard_rw 4096 2026-11-14 17:19 /storage/emulated/0

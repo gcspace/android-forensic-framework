@@ -1,0 +1,754 @@
+{
+  "api": 34,
+  "scenario": "high_parallel_120.yaml",
+  "scheduler": "priority",
+  "max_concurrency": 6,
+  "engine": "parallel-threads",
+  "atomic_mode": "single",
+  "policy_branch": "granular_photo",
+  "policy_target": "/sdcard/DCIM",
+  "adapter": "on",
+  "serial": "emulator-5554",
+  "total_nodes": 120,
+  "total_layers": null,
+  "total_time": 37.847,
+  "atom_time_sum": 37.847,
+  "peak_overlap": 1,
+  "success_atoms": 120,
+  "success_rate": 1.0,
+  "mem_peak_mb": null,
+  "timestamp": "2026-11-14T15:01:40.364818",
+  "atoms": [
+    {
+      "id": "scenario_blob",
+      "op_type": "SCENARIO_BLOB",
+      "success": true,
+      "duration_ms": 37847.2,
+      "timestamp_start": 0.0,
+      "timestamp_end": 37847.2,
+      "error": null
+    }
+  ],
+  "inner": [
+    {
+      "id": "l1_app_1",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 511.0950529994443
+    },
+    {
+      "id": "l1_app_2",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 531.9067770000547
+    },
+    {
+      "id": "l1_app_3",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 712.756350999698
+    },
+    {
+      "id": "l1_app_4",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 418.1332219997421
+    },
+    {
+      "id": "l1_app_5",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 714.8074549995363
+    },
+    {
+      "id": "l1_file_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 109.51573500037193
+    },
+    {
+      "id": "l1_file_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 138.65032400004566
+    },
+    {
+      "id": "l1_file_3",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 95.56749799940735
+    },
+    {
+      "id": "l1_file_4",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 158.93314400035888
+    },
+    {
+      "id": "l1_file_5",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 90.03693500068039
+    },
+    {
+      "id": "l2_app_3",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 428.9528449997306
+    },
+    {
+      "id": "l2_app_4",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 583.3661380000412
+    },
+    {
+      "id": "l2_app_5",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 513.6000709999353
+    },
+    {
+      "id": "l2_file_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 75.04264099989086
+    },
+    {
+      "id": "l2_file_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 90.3443329995498
+    },
+    {
+      "id": "l2_file_3",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 63.93521299958229
+    },
+    {
+      "id": "l2_file_4",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 68.90275000035763
+    },
+    {
+      "id": "l2_file_5",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 60.277015999890864
+    },
+    {
+      "id": "l3_app_3",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 463.87007500045
+    },
+    {
+      "id": "l3_app_4",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 304.34145400021225
+    },
+    {
+      "id": "l3_app_5",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 635.5066830003634
+    },
+    {
+      "id": "l3_file_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 112.08549300022423
+    },
+    {
+      "id": "l3_file_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 34.70634000003338
+    },
+    {
+      "id": "l3_file_3",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 30.296352999284863
+    },
+    {
+      "id": "l3_file_4",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 69.71269600000232
+    },
+    {
+      "id": "l3_file_5",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 152.45199499931186
+    },
+    {
+      "id": "l4_app_3",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 583.3348550004885
+    },
+    {
+      "id": "l4_app_4",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 450.9999820003286
+    },
+    {
+      "id": "l4_app_5",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 415.91718500014395
+    },
+    {
+      "id": "l4_file_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 126.08444300014526
+    },
+    {
+      "id": "l4_file_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 117.07537799980491
+    },
+    {
+      "id": "l4_file_3",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 100.31625400017947
+    },
+    {
+      "id": "l4_file_4",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 112.53046700078994
+    },
+    {
+      "id": "l4_file_5",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 113.76301300060004
+    },
+    {
+      "id": "l5_app_3",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 557.2787329992279
+    },
+    {
+      "id": "l5_app_4",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 406.8895490001887
+    },
+    {
+      "id": "l5_app_5",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 544.5685059996322
+    },
+    {
+      "id": "l5_file_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 144.40810199920088
+    },
+    {
+      "id": "l5_file_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 30.38696500007063
+    },
+    {
+      "id": "l5_file_3",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 28.650668999180198
+    },
+    {
+      "id": "l5_file_4",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 132.39627899974585
+    },
+    {
+      "id": "l5_file_5",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 87.26769899949431
+    },
+    {
+      "id": "l6_app_3",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 602.870017000474
+    },
+    {
+      "id": "l6_app_4",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 523.1560530001298
+    },
+    {
+      "id": "l6_app_5",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 799.8311169994995
+    },
+    {
+      "id": "l6_file_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 44.15064600016922
+    },
+    {
+      "id": "l6_file_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 88.53014199994504
+    },
+    {
+      "id": "l6_file_3",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 73.2198820002377
+    },
+    {
+      "id": "l6_file_4",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 88.17511999979615
+    },
+    {
+      "id": "l6_file_5",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 111.53640200011432
+    },
+    {
+      "id": "l7_app_3",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 640.7034560004249
+    },
+    {
+      "id": "l7_app_4",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 570.1870849998668
+    },
+    {
+      "id": "l7_app_5",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 506.2683629998937
+    },
+    {
+      "id": "l7_file_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 131.22067900002003
+    },
+    {
+      "id": "l7_file_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 282.9024380007759
+    },
+    {
+      "id": "l7_file_3",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 377.6617620000616
+    },
+    {
+      "id": "l7_file_4",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 172.03081400040537
+    },
+    {
+      "id": "l7_file_5",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 177.80825100000948
+    },
+    {
+      "id": "l8_app_3",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 441.3280159998685
+    },
+    {
+      "id": "l8_app_4",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 296.6173000000417
+    },
+    {
+      "id": "l8_app_5",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 278.82627400010824
+    },
+    {
+      "id": "l8_file_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 65.64569799974561
+    },
+    {
+      "id": "l8_file_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 35.63062399998307
+    },
+    {
+      "id": "l8_file_3",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 30.992444000206888
+    },
+    {
+      "id": "l8_file_4",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 35.88654599990696
+    },
+    {
+      "id": "l8_file_5",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 28.791752999648452
+    },
+    {
+      "id": "l9_app_3",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 465.6395560000092
+    },
+    {
+      "id": "l9_app_4",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 426.68565400037915
+    },
+    {
+      "id": "l9_app_5",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 713.2244600001723
+    },
+    {
+      "id": "l9_file_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 137.3677599998191
+    },
+    {
+      "id": "l9_file_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 143.6864779992029
+    },
+    {
+      "id": "l9_file_3",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 47.83145000040531
+    },
+    {
+      "id": "l9_file_4",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 27.022313999943435
+    },
+    {
+      "id": "l9_file_5",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 45.10536599997431
+    },
+    {
+      "id": "l10_app_3",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 288.6138249998912
+    },
+    {
+      "id": "l10_app_4",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 575.0365289999172
+    },
+    {
+      "id": "l10_app_5",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 757.6815980002284
+    },
+    {
+      "id": "l10_file_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 126.52867999952286
+    },
+    {
+      "id": "l10_file_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 99.59372899960726
+    },
+    {
+      "id": "l10_file_3",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 84.04465499985963
+    },
+    {
+      "id": "l10_file_4",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 121.08584199938923
+    },
+    {
+      "id": "l10_file_5",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 87.74211899936199
+    },
+    {
+      "id": "l11_app_3",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 478.8169849999249
+    },
+    {
+      "id": "l11_app_4",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 241.03615899942815
+    },
+    {
+      "id": "l11_app_5",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 583.4686070000753
+    },
+    {
+      "id": "l11_file_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 85.69668800011277
+    },
+    {
+      "id": "l11_file_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 37.17464099917561
+    },
+    {
+      "id": "l11_file_3",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 29.913419999182224
+    },
+    {
+      "id": "l11_file_4",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 29.071604000404477
+    },
+    {
+      "id": "l11_file_5",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 29.123949999921024
+    },
+    {
+      "id": "l12_app_3",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 484.19680900033563
+    },
+    {
+      "id": "l12_app_4",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 619.2083900002763
+    },
+    {
+      "id": "l12_app_5",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 485.4723700005561
+    },
+    {
+      "id": "l12_file_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 56.2500530006364
+    },
+    {
+      "id": "l12_file_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 29.289378000423312
+    },
+    {
+      "id": "l12_file_3",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 27.948352999985218
+    },
+    {
+      "id": "l12_file_4",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 29.927329000085592
+    },
+    {
+      "id": "l12_file_5",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 84.76737499982119
+    },
+    {
+      "id": "l2_app_1",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 573.2845789995044
+    },
+    {
+      "id": "l2_app_2",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 842.0273120002821
+    },
+    {
+      "id": "l3_app_1",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 578.8817799994722
+    },
+    {
+      "id": "l3_app_2",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 700.3519940003753
+    },
+    {
+      "id": "l4_app_1",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 573.4372169999406
+    },
+    {
+      "id": "l4_app_2",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 485.0089010000229
+    },
+    {
+      "id": "l5_app_1",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 634.2562500005588
+    },
+    {
+      "id": "l5_app_2",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 799.0503930002451
+    },
+    {
+      "id": "l6_app_1",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 1052.043456000276
+    },
+    {
+      "id": "l6_app_2",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 479.3630079999566
+    },
+    {
+      "id": "l7_app_1",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 631.1175119997934
+    },
+    {
+      "id": "l7_app_2",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 508.2806190000847
+    },
+    {
+      "id": "l8_app_1",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 579.1742780003697
+    },
+    {
+      "id": "l8_app_2",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 602.2811789996922
+    },
+    {
+      "id": "l9_app_1",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 371.1768149994314
+    },
+    {
+      "id": "l9_app_2",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 383.0351290004328
+    },
+    {
+      "id": "l10_app_1",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 556.6155430004001
+    },
+    {
+      "id": "l10_app_2",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 431.73158300016075
+    },
+    {
+      "id": "l11_app_1",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 509.72341999970376
+    },
+    {
+      "id": "l11_app_2",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 393.91480399947613
+    },
+    {
+      "id": "l12_app_1",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 625.8050480000675
+    },
+    {
+      "id": "l12_app_2",
+      "op_type": "APP_START",
+      "success": true,
+      "duration_ms": 516.0503059998155
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+total 16
+drwxrwx--- 15 media_rw media_rw 4096 2026-11-14 17:23 0
+drwxrwx---  2 media_rw media_rw 4096 2026-11-15 22:34 obb

@@ -1,0 +1,6 @@
+none on /sys/fs/fuse/connections type fusectl (rw,relatime)
+/dev/fuse on /storage/emulated type fuse (rw,lazytime,nosuid,nodev,noexec,noatime,user_id=0,group_id=0,allow_other)
+/dev/fuse on /mnt/installer/0/emulated type fuse (rw,lazytime,nosuid,nodev,noexec,noatime,user_id=0,group_id=0,allow_other)
+/dev/fuse on /mnt/androidwritable/0/emulated type fuse (rw,lazytime,nosuid,nodev,noexec,noatime,user_id=0,group_id=0,allow_other)
+/dev/fuse on /mnt/user/0/emulated type fuse (rw,lazytime,nosuid,nodev,noexec,noatime,user_id=0,group_id=0,allow_other)
+/dev/block/dm-5 on /mnt/pass_through/0/emulated type ext4 (rw,seclabel,nosuid,nodev,noatime,resgid=1065,errors=panic)

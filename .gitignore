@@ -2,6 +2,11 @@ __pycache__/
 *.pyc
 *.log
 output/*
+!output/paper
+!output/jitter_w6
+!output/groundtruth
+!output/README.md
+!output/**/*.log
 venv/
 *.img
 *.zip

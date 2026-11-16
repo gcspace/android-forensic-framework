@@ -1,0 +1,6 @@
+drwxrws--x 5 media_rw media_rw    4096 2026-11-13 02:15 /sdcard/Android
+drwxrws--x 6 media_rw ext_data_rw 4096 2026-11-13 02:17 /sdcard/Android/data
+drwxrws--x 2 media_rw media_rw    4096 2026-11-13 02:15 /sdcard/Android/media
+drwxrws--- 2 u0_a170  media_rw    4096 2026-11-14 17:47 /sdcard/DCIM
+drwxrws--- 2 u0_a170  media_rw    4096 2026-11-13 02:15 /sdcard/Documents
+drwxrws--- 2 u0_a170  media_rw    4096 2026-11-13 02:15 /sdcard/Download

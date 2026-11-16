@@ -1,0 +1,12 @@
+{
+  "tag": "table4_version_matrix",
+  "created": "2026-11-14 17:47:57 CST",
+  "host": "gc-Precision",
+  "kernel": "Linux 6.8.0-136-generic",
+  "code_sha256": "52e22a9e840ae7f245e9af4a29c3fde38b590bbdabd656d8b029438ada6f2a55",
+  "adb": "Android Debug Bridge version 1.0.41",
+  "avds": "rev_api28,rev_api29,rev_api30,rev_api31,rev_api32,rev_api33,rev_api34,",
+  "python": "Python 3.10.12",
+  "file_count": 80,
+  "scope": "该批次内的全部运行记录与审计结果；文件清单见同目录 files.txt"
+}

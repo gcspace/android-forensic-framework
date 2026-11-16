@@ -1,0 +1,24 @@
+{
+  "api": 33,
+  "branch": "granular_media",
+  "adapter": "on",
+  "policy_target": "/sdcard/Pictures",
+  "expected": 6,
+  "found": 0,
+  "missing": [
+    "/sdcard/Pictures/test1.txt",
+    "/sdcard/Pictures/test2_copy.txt",
+    "/sdcard/Pictures/test3.txt",
+    "/sdcard/Pictures/test3_copy.txt",
+    "/sdcard/Pictures/test5.txt",
+    "/sdcard/Pictures/test6.txt"
+  ],
+  "deleted_in_scenario": 3,
+  "loss_rate": 1.0,
+  "files_deleted_in_scenario": [
+    "/sdcard/Pictures/test1_copy.txt",
+    "/sdcard/Pictures/test2.txt",
+    "/sdcard/Pictures/test4.txt"
+  ],
+  "timestamp": "2026-11-14T15:59:36.323027"
+}

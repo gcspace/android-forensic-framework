@@ -1,0 +1,490 @@
+name: "80步基准场景"
+description: "用于规模扩展性测试的80原子标准场景（50场景尾部追加30原子，含两处并行分支）"
+api_level: 33
+
+nodes:
+  # === UI交互层 (48个，占比60%) ===
+  - id: click_1
+    type: UI_CLICK
+    params: {x: 100, y: 200}
+    estimated_cost: 0.5
+    depends_on: []
+  
+  - id: click_2
+    type: UI_CLICK
+    params: {x: 300, y: 400}
+    estimated_cost: 0.5
+    depends_on: [click_1]
+  
+  - id: click_3
+    type: UI_CLICK
+    params: {x: 200, y: 300}
+    estimated_cost: 0.5
+    depends_on: [click_2]
+  
+  - id: click_4
+    type: UI_CLICK
+    params: {x: 150, y: 250}
+    estimated_cost: 0.5
+    depends_on: [click_3]
+  
+  - id: click_5
+    type: UI_CLICK
+    params: {x: 500, y: 300}
+    estimated_cost: 0.5
+    depends_on: [click_4]
+  
+  - id: click_6
+    type: UI_CLICK
+    params: {x: 400, y: 500}
+    estimated_cost: 0.5
+    depends_on: [click_5]
+  
+  - id: click_7
+    type: UI_CLICK
+    params: {x: 250, y: 350}
+    estimated_cost: 0.5
+    depends_on: [click_6]
+  
+  - id: click_8
+    type: UI_CLICK
+    params: {x: 350, y: 250}
+    estimated_cost: 0.5
+    depends_on: [click_7]
+  
+  - id: click_9
+    type: UI_CLICK
+    params: {x: 450, y: 300}
+    estimated_cost: 0.5
+    depends_on: [click_7]
+  
+  - id: click_10
+    type: UI_CLICK
+    params: {x: 550, y: 400}
+    estimated_cost: 0.5
+    depends_on: [click_7]
+  
+  - id: swipe_1
+    type: UI_SWIPE
+    params: {x1: 100, y1: 500, x2: 300, y2: 500, duration: 300}
+    estimated_cost: 0.8
+    depends_on: [click_10]
+  
+  - id: swipe_2
+    type: UI_SWIPE
+    params: {x1: 200, y1: 800, x2: 200, y2: 200, duration: 400}
+    estimated_cost: 1.0
+    depends_on: [swipe_1]
+  
+  - id: swipe_3
+    type: UI_SWIPE
+    params: {x1: 100, y1: 300, x2: 500, y2: 300, duration: 300}
+    estimated_cost: 0.8
+    depends_on: [swipe_2]
+  
+  - id: swipe_4
+    type: UI_SWIPE
+    params: {x1: 300, y1: 600, x2: 500, y2: 600, duration: 300}
+    estimated_cost: 0.8
+    depends_on: [swipe_3]
+  
+  - id: swipe_5
+    type: UI_SWIPE
+    params: {x1: 100, y1: 100, x2: 400, y2: 800, duration: 500}
+    estimated_cost: 1.2
+    depends_on: [swipe_4]
+  
+  - id: swipe_6
+    type: UI_SWIPE
+    params: {x1: 400, y1: 400, x2: 400, y2: 100, duration: 300}
+    estimated_cost: 0.8
+    depends_on: [swipe_5]
+  
+  - id: input_1
+    type: UI_INPUT
+    params: {text: "test_input_1"}
+    estimated_cost: 0.3
+    depends_on: [swipe_6]
+  
+  - id: input_2
+    type: UI_INPUT
+    params: {text: "test_input_2"}
+    estimated_cost: 0.3
+    depends_on: [input_1]
+  
+  - id: input_3
+    type: UI_INPUT
+    params: {text: "test_input_3"}
+    estimated_cost: 0.3
+    depends_on: [input_2]
+  
+  - id: input_4
+    type: UI_INPUT
+    params: {text: "test_input_4"}
+    estimated_cost: 0.3
+    depends_on: [input_3]
+  
+  - id: input_5
+    type: UI_INPUT
+    params: {text: "test_input_5"}
+    estimated_cost: 0.3
+    depends_on: [input_4]
+  
+  - id: input_6
+    type: UI_INPUT
+    params: {text: "test_input_6"}
+    estimated_cost: 0.3
+    depends_on: [input_5]
+  
+  - id: input_7
+    type: UI_INPUT
+    params: {text: "test_input_7"}
+    estimated_cost: 0.3
+    depends_on: [input_6]
+  
+  - id: input_8
+    type: UI_INPUT
+    params: {text: "test_input_8"}
+    estimated_cost: 0.3
+    depends_on: [input_7]
+  
+  - id: click_11
+    type: UI_CLICK
+    params: {x: 200, y: 450}
+    estimated_cost: 0.5
+    depends_on: [input_8]
+  
+  - id: click_12
+    type: UI_CLICK
+    params: {x: 600, y: 200}
+    estimated_cost: 0.5
+    depends_on: [click_11]
+  
+  - id: click_13
+    type: UI_CLICK
+    params: {x: 300, y: 300}
+    estimated_cost: 0.5
+    depends_on: [click_12]
+  
+  - id: click_14
+    type: UI_CLICK
+    params: {x: 400, y: 400}
+    estimated_cost: 0.5
+    depends_on: [click_13]
+  
+  - id: click_15
+    type: UI_CLICK
+    params: {x: 500, y: 500}
+    estimated_cost: 0.5
+    depends_on: [click_14]
+  
+  - id: click_16
+    type: UI_CLICK
+    params: {x: 250, y: 250}
+    estimated_cost: 0.5
+    depends_on: [click_15]
+  
+  # === 文件操作层 (19个，占比24%) ===
+  - id: file_create_1
+    type: FILE_CREATE
+    params: {path: "test1.txt", content: "Hello World 1", is_media: false}
+    estimated_cost: 0.8
+    depends_on: [click_16]
+  
+  - id: file_create_2
+    type: FILE_CREATE
+    params: {path: "test2.txt", content: "Hello World 2", is_media: false}
+    estimated_cost: 0.8
+    depends_on: [file_create_1]
+  
+  - id: file_create_3
+    type: FILE_CREATE
+    params: {path: "test3.txt", content: "Hello World 3", is_media: false}
+    estimated_cost: 0.8
+    depends_on: [file_create_2]
+  
+  - id: file_copy_1
+    type: FILE_COPY
+    params: {src: "test1.txt", dst: "test1_copy.txt", is_media: false}
+    estimated_cost: 0.6
+    depends_on: [file_create_3]
+  
+  - id: file_copy_2
+    type: FILE_COPY
+    params: {src: "test2.txt", dst: "test2_copy.txt", is_media: false}
+    estimated_cost: 0.6
+    depends_on: [file_copy_1]
+  
+  - id: file_create_4
+    type: FILE_CREATE
+    params: {path: "test4.txt", content: "Hello World 4", is_media: false}
+    estimated_cost: 0.8
+    depends_on: [file_copy_2]
+  
+  - id: file_create_5
+    type: FILE_CREATE
+    params: {path: "test5.txt", content: "Hello World 5", is_media: false}
+    estimated_cost: 0.8
+    depends_on: [file_create_4]
+  
+  - id: file_copy_3
+    type: FILE_COPY
+    params: {src: "test3.txt", dst: "test3_copy.txt", is_media: false}
+    estimated_cost: 0.6
+    depends_on: [file_create_5]
+  
+  - id: file_create_6
+    type: FILE_CREATE
+    params: {path: "test6.txt", content: "Hello World 6", is_media: false}
+    estimated_cost: 0.8
+    depends_on: [file_copy_3]
+  
+  - id: file_delete_1
+    type: FILE_DELETE
+    params: {path: "test2.txt", is_media: false}
+    estimated_cost: 0.4
+    depends_on: [file_create_6]
+  
+  - id: file_delete_2
+    type: FILE_DELETE
+    params: {path: "test4.txt", is_media: false}
+    estimated_cost: 0.4
+    depends_on: [file_delete_1]
+  
+  - id: file_delete_3
+    type: FILE_DELETE
+    params: {path: "test1_copy.txt", is_media: false}
+    estimated_cost: 0.4
+    depends_on: [file_delete_2]
+  
+  # === 应用操作层 (13个，占比16%) ===
+  - id: app_start_1
+    type: APP_START
+    params: {package: "com.android.settings"}
+    estimated_cost: 1.8
+    depends_on: [file_delete_3]
+  
+  - id: app_stop_1
+    type: APP_STOP
+    params: {package: "com.android.settings"}
+    estimated_cost: 0.4
+    depends_on: [app_start_1]
+  
+  - id: app_start_2
+    type: APP_START
+    params: {package: "com.android.settings"}
+    estimated_cost: 1.8
+    depends_on: [app_stop_1]
+  
+  - id: app_stop_2
+    type: APP_STOP
+    params: {package: "com.android.settings"}
+    estimated_cost: 0.4
+    depends_on: [app_start_2]
+  
+  - id: app_start_3
+    type: APP_START
+    params: {package: "com.android.chrome"}
+    estimated_cost: 1.8
+    depends_on: [app_stop_2]
+  
+  - id: app_stop_3
+    type: APP_STOP
+    params: {package: "com.android.chrome"}
+    estimated_cost: 0.4
+    depends_on: [app_start_3]
+  
+  - id: app_start_4
+    type: APP_START
+    params: {package: "com.android.chrome"}
+    estimated_cost: 1.8
+    depends_on: [app_stop_3]
+  
+  - id: app_stop_4
+    type: APP_STOP
+    params: {package: "com.android.chrome"}
+    estimated_cost: 0.4
+    depends_on: [app_start_4]
+  
+  # === UI交互层 (48个，占比60%) ===
+  - id: click_17
+    type: UI_CLICK
+    params: {x: 100, y: 200}
+    estimated_cost: 0.5
+    depends_on: [app_stop_4]
+  
+  - id: click_18
+    type: UI_CLICK
+    params: {x: 300, y: 400}
+    estimated_cost: 0.5
+    depends_on: [click_17]
+  
+  - id: click_19
+    type: UI_CLICK
+    params: {x: 200, y: 300}
+    estimated_cost: 0.5
+    depends_on: [click_18]
+  
+  - id: click_20
+    type: UI_CLICK
+    params: {x: 150, y: 250}
+    estimated_cost: 0.5
+    depends_on: [click_19]
+  
+  - id: click_21
+    type: UI_CLICK
+    params: {x: 500, y: 300}
+    estimated_cost: 0.5
+    depends_on: [click_20]
+  
+  - id: click_22
+    type: UI_CLICK
+    params: {x: 400, y: 500}
+    estimated_cost: 0.5
+    depends_on: [click_21]
+  
+  - id: click_23
+    type: UI_CLICK
+    params: {x: 250, y: 350}
+    estimated_cost: 0.5
+    depends_on: [click_22]
+  
+  - id: click_24
+    type: UI_CLICK
+    params: {x: 350, y: 250}
+    estimated_cost: 0.5
+    depends_on: [click_23]
+  
+  - id: swipe_7
+    type: UI_SWIPE
+    params: {x1: 100, y1: 500, x2: 300, y2: 500, duration: 300}
+    estimated_cost: 0.8
+    depends_on: [click_24]
+  
+  - id: swipe_8
+    type: UI_SWIPE
+    params: {x1: 200, y1: 800, x2: 200, y2: 200, duration: 400}
+    estimated_cost: 1.0
+    depends_on: [swipe_7]
+  
+  - id: swipe_9
+    type: UI_SWIPE
+    params: {x1: 100, y1: 300, x2: 500, y2: 300, duration: 300}
+    estimated_cost: 0.8
+    depends_on: [swipe_8]
+  
+  - id: swipe_10
+    type: UI_SWIPE
+    params: {x1: 300, y1: 600, x2: 500, y2: 600, duration: 300}
+    estimated_cost: 0.8
+    depends_on: [swipe_9]
+  
+  - id: input_9
+    type: UI_INPUT
+    params: {text: "test_input_1"}
+    estimated_cost: 0.3
+    depends_on: [swipe_10]
+  
+  - id: input_10
+    type: UI_INPUT
+    params: {text: "test_input_2"}
+    estimated_cost: 0.3
+    depends_on: [swipe_10]
+  
+  - id: input_11
+    type: UI_INPUT
+    params: {text: "test_input_3"}
+    estimated_cost: 0.3
+    depends_on: [input_10]
+  
+  - id: input_12
+    type: UI_INPUT
+    params: {text: "test_input_4"}
+    estimated_cost: 0.3
+    depends_on: [input_11]
+  
+  - id: input_13
+    type: UI_INPUT
+    params: {text: "test_input_5"}
+    estimated_cost: 0.3
+    depends_on: [input_12]
+  
+  - id: input_14
+    type: UI_INPUT
+    params: {text: "test_input_6"}
+    estimated_cost: 0.3
+    depends_on: [input_13]
+  
+  # === 文件操作层 (19个，占比24%) ===
+  - id: file_create_7
+    type: FILE_CREATE
+    params: {path: "test1.txt", content: "Hello World 1", is_media: false}
+    estimated_cost: 0.8
+    depends_on: [input_14]
+  
+  - id: file_create_8
+    type: FILE_CREATE
+    params: {path: "test2.txt", content: "Hello World 2", is_media: false}
+    estimated_cost: 0.8
+    depends_on: [file_create_7]
+  
+  - id: file_create_9
+    type: FILE_CREATE
+    params: {path: "test3.txt", content: "Hello World 3", is_media: false}
+    estimated_cost: 0.8
+    depends_on: [file_create_8]
+  
+  - id: file_create_10
+    type: FILE_CREATE
+    params: {path: "test4.txt", content: "Hello World 4", is_media: false}
+    estimated_cost: 0.8
+    depends_on: [file_create_9]
+  
+  - id: file_copy_4
+    type: FILE_COPY
+    params: {src: "test1.txt", dst: "test1_copy.txt", is_media: false}
+    estimated_cost: 0.6
+    depends_on: [file_create_10]
+  
+  - id: file_copy_5
+    type: FILE_COPY
+    params: {src: "test2.txt", dst: "test2_copy.txt", is_media: false}
+    estimated_cost: 0.6
+    depends_on: [file_copy_4]
+  
+  - id: file_delete_4
+    type: FILE_DELETE
+    params: {path: "test2.txt", is_media: false}
+    estimated_cost: 0.4
+    depends_on: [file_copy_5]
+  
+  # === 应用操作层 (13个，占比16%) ===
+  - id: app_start_5
+    type: APP_START
+    params: {package: "com.android.settings"}
+    estimated_cost: 1.8
+    depends_on: [file_delete_4]
+  
+  - id: app_start_6
+    type: APP_START
+    params: {package: "com.android.settings"}
+    estimated_cost: 1.8
+    depends_on: [app_start_5]
+  
+  - id: app_start_7
+    type: APP_START
+    params: {package: "com.android.chrome"}
+    estimated_cost: 1.8
+    depends_on: [app_start_6]
+  
+  - id: app_stop_5
+    type: APP_STOP
+    params: {package: "com.android.settings"}
+    estimated_cost: 0.4
+    depends_on: [app_start_7]
+  
+  - id: app_stop_6
+    type: APP_STOP
+    params: {package: "com.android.settings"}
+    estimated_cost: 0.4
+    depends_on: [app_stop_5]

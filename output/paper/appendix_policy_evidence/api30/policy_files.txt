@@ -1,0 +1,2 @@
+ls: /data/system/storage.xml: No such file or directory
+-rw-rw---- 1 system system 778442 2026-11-15 22:34 /data/system/packages.xml

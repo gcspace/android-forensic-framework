@@ -1,0 +1,13 @@
+{
+  "api": 35,
+  "branch": "granular_photo",
+  "adapter": "on",
+  "policy_target": "/sdcard/DCIM",
+  "expected": 27,
+  "found": 27,
+  "missing": [],
+  "deleted_in_scenario": 0,
+  "loss_rate": 0.0,
+  "files_deleted_in_scenario": [],
+  "timestamp": "2026-11-15T19:00:47.420013"
+}

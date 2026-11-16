@@ -1,0 +1,11 @@
+{
+  "fault": "dag_cycle",
+  "repeat": 20,
+  "injected": 20,
+  "full_success": 0,
+  "completion_rate": 0.0,
+  "device": "emulator-5554",
+  "scenario": "baseline_50",
+  "w": 1,
+  "out": "/home/gc/aff/android-forensic-framework-main/output/paper/table8_fault_adb_saf_pool/dag_cycle"
+}

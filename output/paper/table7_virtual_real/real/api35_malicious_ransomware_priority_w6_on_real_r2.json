@@ -1,0 +1,338 @@
+{
+  "api": 35,
+  "scenario": "malicious_ransomware.yaml",
+  "scheduler": "priority",
+  "max_concurrency": 6,
+  "engine": "parallel-threads",
+  "atomic_mode": "dag",
+  "policy_branch": "granular_photo",
+  "policy_target": "/sdcard/DCIM",
+  "adapter": "on",
+  "serial": "REDACTED_PIXEL7",
+  "total_nodes": 35,
+  "total_layers": null,
+  "total_time": 1.571,
+  "atom_time_sum": 3.25,
+  "peak_overlap": 6,
+  "success_atoms": 35,
+  "success_rate": 1.0,
+  "mem_peak_mb": null,
+  "timestamp": "2026-11-15T19:00:59.864278",
+  "atoms": [
+    {
+      "id": "click_1",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 50.79855700000189,
+      "timestamp_start": 506127.621591,
+      "timestamp_end": 506178.420148,
+      "error": null
+    },
+    {
+      "id": "click_2",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 65.92167700000573,
+      "timestamp_start": 506178.7132,
+      "timestamp_end": 506244.634877,
+      "error": null
+    },
+    {
+      "id": "swipe_1",
+      "op_type": "UI_SWIPE",
+      "success": true,
+      "duration_ms": 373.3851240000222,
+      "timestamp_start": 506244.924245,
+      "timestamp_end": 506618.309369,
+      "error": null
+    },
+    {
+      "id": "click_3",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 65.57910500001162,
+      "timestamp_start": 506618.608264,
+      "timestamp_end": 506684.187369,
+      "error": null
+    },
+    {
+      "id": "input_1",
+      "op_type": "UI_INPUT",
+      "success": true,
+      "duration_ms": 104.37007699999958,
+      "timestamp_start": 506684.503124,
+      "timestamp_end": 506788.873201,
+      "error": null
+    },
+    {
+      "id": "click_4",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 64.50211400003172,
+      "timestamp_start": 506789.270194,
+      "timestamp_end": 506853.772308,
+      "error": null
+    },
+    {
+      "id": "swipe_2",
+      "op_type": "UI_SWIPE",
+      "success": true,
+      "duration_ms": 371.1147029999993,
+      "timestamp_start": 506854.113783,
+      "timestamp_end": 507225.228486,
+      "error": null
+    },
+    {
+      "id": "click_5",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 64.73786000005202,
+      "timestamp_start": 507225.538654,
+      "timestamp_end": 507290.276514,
+      "error": null
+    },
+    {
+      "id": "doc_scan_10",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 69.49453099997481,
+      "timestamp_start": 507291.342858,
+      "timestamp_end": 507360.837389,
+      "error": null
+    },
+    {
+      "id": "img_scan_8",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 97.72094500000821,
+      "timestamp_start": 507290.715554,
+      "timestamp_end": 507388.436499,
+      "error": null
+    },
+    {
+      "id": "doc_scan_12",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 95.2689680000185,
+      "timestamp_start": 507293.804122,
+      "timestamp_end": 507389.07309,
+      "error": null
+    },
+    {
+      "id": "doc_scan_11",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 96.07930699997814,
+      "timestamp_start": 507293.407948,
+      "timestamp_end": 507389.487255,
+      "error": null
+    },
+    {
+      "id": "doc_scan_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 103.23069500003476,
+      "timestamp_start": 507290.957312,
+      "timestamp_end": 507394.188007,
+      "error": null
+    },
+    {
+      "id": "doc_scan_13",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 117.2080830000341,
+      "timestamp_start": 507294.818093,
+      "timestamp_end": 507412.026176,
+      "error": null
+    },
+    {
+      "id": "doc_scan_15",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 43.25760500004981,
+      "timestamp_start": 507389.357988,
+      "timestamp_end": 507432.615593,
+      "error": null
+    },
+    {
+      "id": "doc_scan_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 61.877694999973755,
+      "timestamp_start": 507390.308617,
+      "timestamp_end": 507452.186312,
+      "error": null
+    },
+    {
+      "id": "doc_scan_14",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 92.59298100002343,
+      "timestamp_start": 507361.260945,
+      "timestamp_end": 507453.853926,
+      "error": null
+    },
+    {
+      "id": "doc_scan_3",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 86.34865300002275,
+      "timestamp_start": 507394.484395,
+      "timestamp_end": 507480.833048,
+      "error": null
+    },
+    {
+      "id": "img_scan_9",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 92.76151699997718,
+      "timestamp_start": 507388.808578,
+      "timestamp_end": 507481.570095,
+      "error": null
+    },
+    {
+      "id": "doc_scan_4",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 90.10681900003692,
+      "timestamp_start": 507412.410192,
+      "timestamp_end": 507502.517011,
+      "error": null
+    },
+    {
+      "id": "doc_scan_5",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 70.67208500002744,
+      "timestamp_start": 507432.898014,
+      "timestamp_end": 507503.570099,
+      "error": null
+    },
+    {
+      "id": "doc_scan_6",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 52.853394000034314,
+      "timestamp_start": 507452.516745,
+      "timestamp_end": 507505.370139,
+      "error": null
+    },
+    {
+      "id": "doc_scan_7",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 79.54779899999266,
+      "timestamp_start": 507454.373133,
+      "timestamp_end": 507533.920932,
+      "error": null
+    },
+    {
+      "id": "doc_scan_8",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 69.72725499997614,
+      "timestamp_start": 507481.196279,
+      "timestamp_end": 507550.923534,
+      "error": null
+    },
+    {
+      "id": "img_scan_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 51.40870700002415,
+      "timestamp_start": 507503.865869,
+      "timestamp_end": 507555.274576,
+      "error": null
+    },
+    {
+      "id": "img_scan_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 67.79084600001806,
+      "timestamp_start": 507505.684107,
+      "timestamp_end": 507573.474953,
+      "error": null
+    },
+    {
+      "id": "doc_scan_9",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 71.18063300003996,
+      "timestamp_start": 507502.906384,
+      "timestamp_end": 507574.087017,
+      "error": null
+    },
+    {
+      "id": "img_scan_10",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 112.65032300003804,
+      "timestamp_start": 507482.124707,
+      "timestamp_end": 507594.77503,
+      "error": null
+    },
+    {
+      "id": "img_scan_4",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 62.33416899997974,
+      "timestamp_start": 507551.278463,
+      "timestamp_end": 507613.612632,
+      "error": null
+    },
+    {
+      "id": "img_scan_5",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 78.09116000001086,
+      "timestamp_start": 507555.504931,
+      "timestamp_end": 507633.596091,
+      "error": null
+    },
+    {
+      "id": "img_scan_3",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 99.87604300002567,
+      "timestamp_start": 507534.243751,
+      "timestamp_end": 507634.119794,
+      "error": null
+    },
+    {
+      "id": "img_scan_6",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 60.803765999968164,
+      "timestamp_start": 507573.780236,
+      "timestamp_end": 507634.584002,
+      "error": null
+    },
+    {
+      "id": "img_scan_7",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 65.45268400001805,
+      "timestamp_start": 507574.836982,
+      "timestamp_end": 507640.289666,
+      "error": null
+    },
+    {
+      "id": "img_scan_11",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 51.664027000020724,
+      "timestamp_start": 507595.110421,
+      "timestamp_end": 507646.774448,
+      "error": null
+    },
+    {
+      "id": "img_scan_12",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 49.54297100001713,
+      "timestamp_start": 507647.11897,
+      "timestamp_end": 507696.661941,
+      "error": null
+    }
+  ]
+}

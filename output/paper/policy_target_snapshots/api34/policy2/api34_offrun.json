@@ -1,0 +1,24 @@
+{
+  "api": 34,
+  "branch": "granular_photo",
+  "adapter": "on",
+  "policy_target": "/sdcard/DCIM",
+  "expected": 6,
+  "found": 0,
+  "missing": [
+    "/sdcard/DCIM/test1.txt",
+    "/sdcard/DCIM/test2_copy.txt",
+    "/sdcard/DCIM/test3.txt",
+    "/sdcard/DCIM/test3_copy.txt",
+    "/sdcard/DCIM/test5.txt",
+    "/sdcard/DCIM/test6.txt"
+  ],
+  "deleted_in_scenario": 3,
+  "loss_rate": 1.0,
+  "files_deleted_in_scenario": [
+    "/sdcard/DCIM/test1_copy.txt",
+    "/sdcard/DCIM/test2.txt",
+    "/sdcard/DCIM/test4.txt"
+  ],
+  "timestamp": "2026-11-14T16:11:39.743238"
+}

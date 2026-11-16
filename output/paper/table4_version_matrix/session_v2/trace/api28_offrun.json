@@ -1,0 +1,17 @@
+{
+  "api": 28,
+  "branch": "legacy_global",
+  "adapter": "off",
+  "policy_target": "/sdcard",
+  "expected": 6,
+  "found": 6,
+  "missing": [],
+  "deleted_in_scenario": 3,
+  "loss_rate": 0.0,
+  "files_deleted_in_scenario": [
+    "/sdcard/test1_copy.txt",
+    "/sdcard/test2.txt",
+    "/sdcard/test4.txt"
+  ],
+  "timestamp": "2026-11-14T17:12:36.309705"
+}

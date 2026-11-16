@@ -1,0 +1,11 @@
+{
+  "fault": "pool_exhaust",
+  "repeat": 20,
+  "injected": 20,
+  "full_success": 20,
+  "completion_rate": 1.0,
+  "device": "emulator-5554",
+  "scenario": "baseline_50",
+  "w": 1,
+  "out": "/home/gc/aff/android-forensic-framework-main/output/paper/table8_fault_adb_saf_pool/pool_exhaust"
+}

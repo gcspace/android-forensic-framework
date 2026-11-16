@@ -1,5 +1,5 @@
 name: "钓鱼登录场景"
-description: "模拟弹窗诱导用户输入账号密码并转发 (44原子)"
+description: "模拟弹窗诱导用户输入账号密码并转发 (46原子)"
 api_level: 33
 
 nodes:

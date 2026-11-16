@@ -1,0 +1,9 @@
+API	分支			/sdcard可写	MediaStore	SAF	细粒度媒体	部分照片
+28	legacy_global   	是		可选		无	无		无
+29	legacy_optout   	是		可用		有	无		无
+30	scoped_enforced 	否		强制		有	无		无
+31	scoped_enforced 	否		强制		有	无		无
+32	scoped_enforced 	否		强制		有	无		无
+33	granular_media  	否		强制		有	有		无
+34	granular_photo  	否		强制		有	有		有
+35	granular_photo  	否		强制		有	有		有

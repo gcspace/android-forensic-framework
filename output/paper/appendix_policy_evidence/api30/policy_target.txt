@@ -1,0 +1,1 @@
+30	scoped_enforced 	否		强制		有	无		无

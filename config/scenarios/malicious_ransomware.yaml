@@ -1,5 +1,5 @@
 name: "勒索加密场景"
-description: "模拟恶意应用遍历外部存储文档、图片并加密 (46原子)"
+description: "模拟恶意应用遍历外部存储文档、图片并加密 (35原子)"
 api_level: 33
 
 nodes:

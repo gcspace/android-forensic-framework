@@ -1,0 +1,6 @@
+ls: /sdcard/Android/media: No such file or directory
+ls: /sdcard/Documents: No such file or directory
+drwxrwx--x 3 root sdcard_rw 4096 2026-11-13 01:36 /sdcard/Android
+drwxrwx--x 6 root sdcard_rw 4096 2026-11-14 15:23 /sdcard/Android/data
+drwxrwx--x 2 root sdcard_rw 4096 2026-11-13 01:36 /sdcard/DCIM
+drwxrwx--x 2 root sdcard_rw 4096 2026-11-13 01:36 /sdcard/Download

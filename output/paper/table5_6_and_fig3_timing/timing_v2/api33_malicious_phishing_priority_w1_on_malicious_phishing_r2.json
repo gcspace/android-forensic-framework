@@ -1,0 +1,437 @@
+{
+  "api": 33,
+  "scenario": "malicious_phishing.yaml",
+  "scheduler": "priority",
+  "max_concurrency": 1,
+  "engine": "parallel-threads",
+  "atomic_mode": "dag",
+  "policy_branch": "granular_media",
+  "policy_target": "/sdcard/Pictures",
+  "adapter": "on",
+  "serial": "emulator-5554",
+  "total_nodes": 46,
+  "total_layers": null,
+  "total_time": 2.856,
+  "atom_time_sum": 2.834,
+  "peak_overlap": 1,
+  "success_atoms": 46,
+  "success_rate": 1.0,
+  "mem_peak_mb": null,
+  "timestamp": "2026-11-14T16:27:52.786787",
+  "atoms": [
+    {
+      "id": "click_1",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 21.825177999213338,
+      "timestamp_start": 4736765.817018,
+      "timestamp_end": 4736787.642196,
+      "error": null
+    },
+    {
+      "id": "click_2",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 22.7845900002867,
+      "timestamp_start": 4736787.933207,
+      "timestamp_end": 4736810.717797,
+      "error": null
+    },
+    {
+      "id": "swipe_1",
+      "op_type": "UI_SWIPE",
+      "success": true,
+      "duration_ms": 401.5936530008912,
+      "timestamp_start": 4736810.975294,
+      "timestamp_end": 4737212.568947,
+      "error": null
+    },
+    {
+      "id": "click_3",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 137.90668100025505,
+      "timestamp_start": 4737213.298304,
+      "timestamp_end": 4737351.204985,
+      "error": null
+    },
+    {
+      "id": "input_1",
+      "op_type": "UI_INPUT",
+      "success": true,
+      "duration_ms": 357.4217889998108,
+      "timestamp_start": 4737351.665085,
+      "timestamp_end": 4737709.086874,
+      "error": null
+    },
+    {
+      "id": "click_4",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 23.778798999264836,
+      "timestamp_start": 4737709.358524,
+      "timestamp_end": 4737733.137323,
+      "error": null
+    },
+    {
+      "id": "swipe_2",
+      "op_type": "UI_SWIPE",
+      "success": true,
+      "duration_ms": 417.05000799987465,
+      "timestamp_start": 4737733.358469,
+      "timestamp_end": 4738150.408477,
+      "error": null
+    },
+    {
+      "id": "click_5",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 74.3491660002619,
+      "timestamp_start": 4738150.824592,
+      "timestamp_end": 4738225.173758,
+      "error": null
+    },
+    {
+      "id": "fake_login_start",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 71.18880899995565,
+      "timestamp_start": 4738225.684694,
+      "timestamp_end": 4738296.873503,
+      "error": null
+    },
+    {
+      "id": "fake_username_field",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 88.01593100000173,
+      "timestamp_start": 4738303.252411,
+      "timestamp_end": 4738391.268342,
+      "error": null
+    },
+    {
+      "id": "input_username",
+      "op_type": "UI_INPUT",
+      "success": true,
+      "duration_ms": 233.75646200031042,
+      "timestamp_start": 4738391.534534,
+      "timestamp_end": 4738625.290996,
+      "error": null
+    },
+    {
+      "id": "fake_password_field",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 26.076547999866307,
+      "timestamp_start": 4738625.576643,
+      "timestamp_end": 4738651.653191,
+      "error": null
+    },
+    {
+      "id": "input_password",
+      "op_type": "UI_INPUT",
+      "success": true,
+      "duration_ms": 32.25063999928534,
+      "timestamp_start": 4738651.902289,
+      "timestamp_end": 4738684.152929,
+      "error": null
+    },
+    {
+      "id": "fake_login_button",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 22.857173999771476,
+      "timestamp_start": 4738684.417401,
+      "timestamp_end": 4738707.274575,
+      "error": null
+    },
+    {
+      "id": "fake_2fa_field",
+      "op_type": "UI_CLICK",
+      "success": true,
+      "duration_ms": 21.785032000392675,
+      "timestamp_start": 4738707.538644,
+      "timestamp_end": 4738729.323676,
+      "error": null
+    },
+    {
+      "id": "input_2fa",
+      "op_type": "UI_INPUT",
+      "success": true,
+      "duration_ms": 25.893893000669777,
+      "timestamp_start": 4738729.559989,
+      "timestamp_end": 4738755.453882,
+      "error": null
+    },
+    {
+      "id": "create_credentials_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 27.408835999667645,
+      "timestamp_start": 4738755.908269,
+      "timestamp_end": 4738783.317105,
+      "error": null
+    },
+    {
+      "id": "encrypt_creds_1",
+      "op_type": "FILE_COPY",
+      "success": true,
+      "duration_ms": 33.42718499992043,
+      "timestamp_start": 4738783.568936,
+      "timestamp_end": 4738816.996121,
+      "error": null
+    },
+    {
+      "id": "encrypt_creds_2",
+      "op_type": "FILE_COPY",
+      "success": true,
+      "duration_ms": 34.22230499982834,
+      "timestamp_start": 4738817.252581,
+      "timestamp_end": 4738851.474886,
+      "error": null
+    },
+    {
+      "id": "encrypt_creds_3",
+      "op_type": "FILE_COPY",
+      "success": true,
+      "duration_ms": 39.687858999706805,
+      "timestamp_start": 4738851.746111,
+      "timestamp_end": 4738891.43397,
+      "error": null
+    },
+    {
+      "id": "encrypt_creds_4",
+      "op_type": "FILE_COPY",
+      "success": true,
+      "duration_ms": 40.39853799995035,
+      "timestamp_start": 4738891.73041,
+      "timestamp_end": 4738932.128948,
+      "error": null
+    },
+    {
+      "id": "delete_plaintext_1",
+      "op_type": "FILE_DELETE",
+      "success": true,
+      "duration_ms": 25.05517700035125,
+      "timestamp_start": 4738932.418071,
+      "timestamp_end": 4738957.473248,
+      "error": null
+    },
+    {
+      "id": "delete_plaintext_2",
+      "op_type": "FILE_DELETE",
+      "success": true,
+      "duration_ms": 24.590129000134766,
+      "timestamp_start": 4738957.794587,
+      "timestamp_end": 4738982.384716,
+      "error": null
+    },
+    {
+      "id": "delete_plaintext_3",
+      "op_type": "FILE_DELETE",
+      "success": true,
+      "duration_ms": 19.90882399957627,
+      "timestamp_start": 4738982.713677,
+      "timestamp_end": 4739002.622501,
+      "error": null
+    },
+    {
+      "id": "exfil_ready_flag",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 36.530191000550985,
+      "timestamp_start": 4739002.871462,
+      "timestamp_end": 4739039.401653,
+      "error": null
+    },
+    {
+      "id": "c2_prepare",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 29.46922899968922,
+      "timestamp_start": 4739039.660115,
+      "timestamp_end": 4739069.129344,
+      "error": null
+    },
+    {
+      "id": "c2_transmit_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 33.83235700055957,
+      "timestamp_start": 4739069.363057,
+      "timestamp_end": 4739103.195414,
+      "error": null
+    },
+    {
+      "id": "c2_transmit_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 35.03317900002003,
+      "timestamp_start": 4739103.438131,
+      "timestamp_end": 4739138.47131,
+      "error": null
+    },
+    {
+      "id": "c2_transmit_3",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 30.343181999400258,
+      "timestamp_start": 4739138.738923,
+      "timestamp_end": 4739169.082105,
+      "error": null
+    },
+    {
+      "id": "c2_transmit_4",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 28.71717399917543,
+      "timestamp_start": 4739169.537724,
+      "timestamp_end": 4739198.254898,
+      "error": null
+    },
+    {
+      "id": "c2_finalize",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 32.3506770003587,
+      "timestamp_start": 4739198.493717,
+      "timestamp_end": 4739230.844394,
+      "error": null
+    },
+    {
+      "id": "phishing_complete",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 30.952912000007927,
+      "timestamp_start": 4739231.112434,
+      "timestamp_end": 4739262.065346,
+      "error": null
+    },
+    {
+      "id": "delete_c2_traces_1",
+      "op_type": "FILE_DELETE",
+      "success": true,
+      "duration_ms": 22.87934400048107,
+      "timestamp_start": 4739262.347863,
+      "timestamp_end": 4739285.227207,
+      "error": null
+    },
+    {
+      "id": "capture_creds_1",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 30.557854000478983,
+      "timestamp_start": 4739285.495809,
+      "timestamp_end": 4739316.053663,
+      "error": null
+    },
+    {
+      "id": "delete_c2_traces_2",
+      "op_type": "FILE_DELETE",
+      "success": true,
+      "duration_ms": 22.751892999745905,
+      "timestamp_start": 4739316.341034,
+      "timestamp_end": 4739339.092927,
+      "error": null
+    },
+    {
+      "id": "capture_creds_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 31.148027000017464,
+      "timestamp_start": 4739339.365829,
+      "timestamp_end": 4739370.513856,
+      "error": null
+    },
+    {
+      "id": "capture_creds_3",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 33.013443999923766,
+      "timestamp_start": 4739370.82039,
+      "timestamp_end": 4739403.833834,
+      "error": null
+    },
+    {
+      "id": "capture_creds_4",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 26.993912000209093,
+      "timestamp_start": 4739404.083134,
+      "timestamp_end": 4739431.077046,
+      "error": null
+    },
+    {
+      "id": "capture_creds_5",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 27.03126099985093,
+      "timestamp_start": 4739431.334668,
+      "timestamp_end": 4739458.365929,
+      "error": null
+    },
+    {
+      "id": "capture_creds_6",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 26.7117870002985,
+      "timestamp_start": 4739458.638858,
+      "timestamp_end": 4739485.350645,
+      "error": null
+    },
+    {
+      "id": "capture_creds_7",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 27.289952999912202,
+      "timestamp_start": 4739485.617797,
+      "timestamp_end": 4739512.90775,
+      "error": null
+    },
+    {
+      "id": "create_credentials_2",
+      "op_type": "FILE_CREATE",
+      "success": true,
+      "duration_ms": 27.228361999616027,
+      "timestamp_start": 4739513.173552,
+      "timestamp_end": 4739540.401914,
+      "error": null
+    },
+    {
+      "id": "delete_c2_traces_3",
+      "op_type": "FILE_DELETE",
+      "success": true,
+      "duration_ms": 19.311720999889076,
+      "timestamp_start": 4739540.859878,
+      "timestamp_end": 4739560.171599,
+      "error": null
+    },
+    {
+      "id": "delete_traces_1",
+      "op_type": "FILE_DELETE",
+      "success": true,
+      "duration_ms": 19.631943999789655,
+      "timestamp_start": 4739560.389839,
+      "timestamp_end": 4739580.021783,
+      "error": null
+    },
+    {
+      "id": "delete_c2_traces_4",
+      "op_type": "FILE_DELETE",
+      "success": true,
+      "duration_ms": 19.951636999845505,
+      "timestamp_start": 4739580.302566,
+      "timestamp_end": 4739600.254203,
+      "error": null
+    },
+    {
+      "id": "delete_traces_2",
+      "op_type": "FILE_DELETE",
+      "success": true,
+      "duration_ms": 19.067056000232697,
+      "timestamp_start": 4739600.516844,
+      "timestamp_end": 4739619.5839,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "api": 31,
+  "branch": "scoped_enforced",
+  "adapter": "on",
+  "policy_target": "/data/local/tmp",
+  "expected": 6,
+  "found": 6,
+  "missing": [],
+  "deleted_in_scenario": 3,
+  "loss_rate": 0.0,
+  "files_deleted_in_scenario": [
+    "/data/local/tmp/test1_copy.txt",
+    "/data/local/tmp/test2.txt",
+    "/data/local/tmp/test4.txt"
+  ],
+  "timestamp": "2026-11-14T17:29:21.274773"
+}

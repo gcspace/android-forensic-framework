@@ -39,23 +39,18 @@ class AtomicOperation(ABC):
         self.api_level = api_level
         self.serial = serial
         self.params = kwargs.get('params', {})
+        self.adapter = kwargs.get('adapter', 'on')
         self.pool = get_pool()
         self.collector = get_collector()
         self._api_branch = self._get_api_branch(api_level)
 
     def _get_api_branch(self, api_level: int) -> str:
-        if api_level <= 28:
-            return "global_file"
-        elif api_level == 29:
-            return "legacy_mode"
-        else:
-            return "saf_only"
+        from core.executor.version_paths import branch_for
+        return branch_for(api_level)
 
     def _get_media_path(self, subpath: str = "") -> str:
-        if self.api_level <= 28:
-            return f"/sdcard/{subpath}"
-        else:
-            return f"/data/local/tmp/{subpath}"
+        from core.executor.version_paths import media_path
+        return media_path(self.api_level, subpath, self.adapter)
 
     def _execute_adb(self, command: str, timeout: int = 30) -> Tuple[str, str, int]:
         return self.pool.execute_with_retry(command, self.serial)
@@ -378,13 +373,14 @@ class AtomicFactory:
     }
 
     @classmethod
-    def create(cls, op_type: str, api_level: int, serial: str = None, params: dict = None) -> AtomicOperation:
+    def create(cls, op_type: str, api_level: int, serial: str = None, params: dict = None,
+               adapter: str = "on") -> AtomicOperation:
         op_class = cls._registry.get(op_type)
         if op_class is None:
             raise ValueError(f"Unknown operation type: {op_type}")
         if params is None:
             params = {}
-        return op_class(api_level=api_level, serial=serial, params=params)
+        return op_class(api_level=api_level, serial=serial, params=params, adapter=adapter)
 
     @classmethod
     def register(cls, op_type: str, op_class):
