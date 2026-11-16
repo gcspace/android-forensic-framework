@@ -4,8 +4,8 @@
 
 口径约定（与正文一致）：
   - 表4：每版 5 轮，前两轮为冷启动预热，取后三轮中位数；
-  - 图3（4.3.1）、表5、表6：取均值和样本标准差；
-  - 表5 ④组：API33 三批 + API34 一批，共 20 轮合并统计；
+  - 图3（4.3.1）、表6、表7：取均值和样本标准差；
+  - 表6 ④组：API33 三批 + API34 一批，共 20 轮合并统计；
   - 表3：W=6 时段分量测量（output/jitter_w6），合计为三项之和。
 
 用法：
@@ -27,7 +27,7 @@ EXPECT_W = {1: 6.86, 2: 6.39, 3: 6.61, 4: 6.51, 6: 6.48, 8: 6.53, 12: 6.48}
 EXPECT_ABL = {'① hp120 W=1': 43.47, '② hp120 W=6 基础Kahn(FIFO就绪)': 15.34,
               '③ hp120 W=6 完整方法': 13.65, '④ 单原子模式(20轮)': 42.35}
 EXPECT_MAL = {'privacy': (36, 2.39), 'phishing': (46, 2.85), 'ransomware': (35, 2.32)}
-# 表7：同版本 API35 虚实对照（每侧 11 轮，剔首轮取 10 轮）
+# 表8：同版本 API35 虚实对照（每侧 11 轮，剔首轮取 10 轮）
 EXPECT_VR = {'sim': 2.062, 'real': 1.534}
 EXPECT_VR_LOSS = 0.0
 EXPECT_TABLE3 = {'ADB 传输开销': 10.26, '系统服务响应': 14.82, '内核调度噪声': 0.66,
@@ -88,7 +88,7 @@ def main():
             paths = [p for p in paths if re.search(r'_r[345]\.json$', p)]
         check('图3 W=%d/s' % w, exp, round(statistics.mean(times(paths)), 2) if paths else None)
 
-    # 表5：①②③ 来自 timing_v2，④ 来自 table5_ablation_group4 四批共 20 轮
+    # 表6：①②③ 来自 timing_v2，④ 来自 table5_ablation_group4 四批共 20 轮
     groups = {
         '① hp120 W=1': os.path.join(tv2, 'api33_high_parallel_120_priority_w1_on_hp120_w1_r*.json'),
         '② hp120 W=6 基础Kahn(FIFO就绪)': os.path.join(tv2, 'api33_high_parallel_120_fifo_w6_on_hp120_fifo_w6_r*.json'),
@@ -96,24 +96,24 @@ def main():
     }
     for name, pattern in groups.items():
         paths = sorted(glob.glob(pattern))
-        check('表5 ' + name, EXPECT_ABL[name], round(statistics.mean(times(paths)), 2) if paths else None)
+        check('表6 ' + name, EXPECT_ABL[name], round(statistics.mean(times(paths)), 2) if paths else None)
 
     s4 = sorted(glob.glob(os.path.join(abl2, '*', '*single*.json')))
-    check('表5 ④ 单原子模式(20轮)', EXPECT_ABL['④ 单原子模式(20轮)'],
+    check('表6 ④ 单原子模式(20轮)', EXPECT_ABL['④ 单原子模式(20轮)'],
           round(statistics.mean(times(s4)), 2) if len(s4) >= 10 else None)
 
-    # 表6：三类恶意场景（原子数、5 轮均值）
+    # 表7：三类恶意场景（原子数、5 轮均值）
     for scene, (natoms, exp) in EXPECT_MAL.items():
         paths = sorted(glob.glob(
             os.path.join(tv2, 'api33_malicious_%s_priority_w1_on_malicious_%s_r*.json' % (scene, scene))))
         if not paths:
-            rows.append(('表6 %s' % scene, exp, None, 'MISSING'))
+            rows.append(('表7 %s' % scene, exp, None, 'MISSING'))
             ok = False
             continue
         n = load(paths[0]).get('total_nodes') or len(load(paths[0]).get('atoms', []))
-        rows.append(('表6 %s原子数' % scene, natoms, n, 'PASS' if n == natoms else 'FAIL'))
+        rows.append(('表7 %s原子数' % scene, natoms, n, 'PASS' if n == natoms else 'FAIL'))
         ok &= (n == natoms)
-        check('表6 %s/s' % scene, exp, round(statistics.mean(times(paths)), 2))
+        check('表7 %s/s' % scene, exp, round(statistics.mean(times(paths)), 2))
 
     # 表3：W=6 抖动分量（读 output/jitter_w6/measurement_result.txt）
     txt = os.path.join(os.path.dirname(a.dir), 'jitter_w6', 'measurement_result.txt')
@@ -147,25 +147,25 @@ def main():
         rows.append(('图4 统计JSON', 'scale_stats.json', None, 'MISSING'))
         ok = False
 
-    # 表7：同版本 API35 虚实对照（每侧 11 轮，剔首轮取 10 轮；导出比例取 trace 审计）
+    # 表8：同版本 API35 虚实对照（每侧 11 轮，剔首轮取 10 轮；导出比例取 trace 审计）
     vr = os.path.join(a.dir, 'table7_virtual_real')
     for side, exp in EXPECT_VR.items():
         paths = sorted(glob.glob(os.path.join(vr, side, 'api35_*_r*.json')))
         keep = [p for p in paths if not re.search(r'_r1\.json$', p)]
         if len(keep) < 10:
-            rows.append(('表7 %s/s' % side, exp, None, 'MISSING'))
+            rows.append(('表8 %s/s' % side, exp, None, 'MISSING'))
             ok = False
             continue
-        check('表7 %s/s' % side, exp, round(statistics.mean(times(keep)), 3), tol=0.01)
+        check('表8 %s/s' % side, exp, round(statistics.mean(times(keep)), 3), tol=0.01)
         t = os.path.join(vr, side, 'trace_on.json')
         if os.path.isfile(t):
             d = load(t)
             rate = d.get('loss_rate')
-            rows.append(('表7 %s导出比例' % side, '100%', '%d/%d' % (d['found'], d['expected']),
+            rows.append(('表8 %s导出比例' % side, '100%', '%d/%d' % (d['found'], d['expected']),
                          'PASS' if rate == EXPECT_VR_LOSS else 'FAIL'))
             ok &= (rate == EXPECT_VR_LOSS)
         else:
-            rows.append(('表7 %s导出比例' % side, '100%', None, 'MISSING'))
+            rows.append(('表8 %s导出比例' % side, '100%', None, 'MISSING'))
             ok = False
 
     # 1-2 路径常量：policy_evidence 批次覆盖 7 版本、每版 11 项，且无 FUSE 未就绪报错
@@ -189,41 +189,41 @@ def main():
     rows.append(('1-2 policy快照无FUSE未就绪', '0', ','.join(bad) if bad else '0', 'PASS' if not bad else 'FAIL'))
     ok &= (not bad)
 
-    # 表8：四类故障单注（API35、W=1、baseline_50，各 20 次）
+    # 表9：四类故障单注（API35、W=1、baseline_50，各 20 次）
     fs = os.path.join(a.dir, 'table8_fault_adb_saf_pool')
     fd = os.path.join(a.dir, 'table8_fault_dag_cycle')
     for kind, exp_med in (('adb_disconnect', 9.89), ('saf_deny', 6.83), ('pool_exhaust', 6.81)):
         p = os.path.join(fs, kind, 'inject_summary.json')
         if not os.path.isfile(p):
-            rows.append(('表8 %s' % kind, 1.0, None, 'MISSING'))
+            rows.append(('表9 %s' % kind, 1.0, None, 'MISSING'))
             ok = False
             continue
         d = load(p)
         rate = d.get('completion_rate', d.get('success_rate'))
-        rows.append(('表8 %s完成率' % kind, 1.0, rate, 'PASS' if rate == 1.0 else 'FAIL'))
+        rows.append(('表9 %s完成率' % kind, 1.0, rate, 'PASS' if rate == 1.0 else 'FAIL'))
         ok &= (rate == 1.0)
         csvp = os.path.join(fs, kind, 'inject_log.csv')
         if os.path.isfile(csvp):
             with open(csvp, encoding='utf-8') as fh:
                 rs = [r for r in csv.DictReader(fh) if r.get('run_s')]
             med = round(statistics.median(float(r['run_s']) for r in rs), 2)
-            check('表8 %s单轮耗时中位' % kind, exp_med, med, tol=0.05)
+            check('表9 %s单轮耗时中位' % kind, exp_med, med, tol=0.05)
 
     # 环依赖：20/20 拒绝加载，success_rate=0，且落盘 refused/cycle_path
     p = os.path.join(fd, 'inject_summary.json')
     if os.path.isfile(p):
         d = load(p)
         rate = d.get('completion_rate')
-        rows.append(('表8 dag_cycle完成率', 0.0, rate, 'PASS' if rate == 0.0 else 'FAIL'))
+        rows.append(('表9 dag_cycle完成率', 0.0, rate, 'PASS' if rate == 0.0 else 'FAIL'))
         ok &= (rate == 0.0)
         js = glob.glob(os.path.join(fd, 'runs', '*.json'))
         refused = [load(j) for j in js]
         good = [j for j in refused if j.get('refused') and j.get('cycle_detected') and j.get('success_rate') == 0.0]
-        rows.append(('表8 dag_cycle拒绝加载计数', 20, '%d/%d' % (len(good), len(js)),
+        rows.append(('表9 dag_cycle拒绝加载计数', 20, '%d/%d' % (len(good), len(js)),
                      'PASS' if len(good) == 20 and len(js) == 20 else 'FAIL'))
         ok &= (len(good) == 20 and len(js) == 20)
     else:
-        rows.append(('表8 dag_cycle完成率', 0.0, None, 'MISSING'))
+        rows.append(('表9 dag_cycle完成率', 0.0, None, 'MISSING'))
         ok = False
 
     # 4.3.6：同一原子重复 5 轮的耗时标准差（数据侧诊断；正文按预热后三轮口径表述）

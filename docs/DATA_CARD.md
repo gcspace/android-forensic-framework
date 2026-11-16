@@ -7,12 +7,12 @@
 | 目录 | 采集时间 | 内容 | 文件数 | 用途 |
 |---|---|---|---|---|
 | `output/paper/table4_version_matrix/` | 2026-11-14 17:47 | `session_v2/runs`（API28–34 × 适配开/关 × 5 轮，每 run 一目录）、`session_v2/trace`（14 份 trace 审计）、`mem_v2`（21 份内存采样） | 80 | 表4、4.3.8 峰值内存、1-2 证据 |
-| `output/paper/table5_6_and_fig3_timing/` | 2026-11-14 16:29 | `timing_v2/`（W=1…12 扫描、hp120 三组、三类恶意场景各 5 轮）、`ablation_v2/`（dag / single 基线） | 78 | 图3、表5①②③、表6 |
+| `output/paper/table5_6_and_fig3_timing/` | 2026-11-14 16:29 | `timing_v2/`（W=1…12 扫描、hp120 三组、三类恶意场景各 5 轮）、`ablation_v2/`（dag / single 基线） | 78 | 图3、表6①②③、表7 |
 | `output/paper/fig4_scale_family/` | 2026-11-16 02:34 | 五档同族场景（20s/30/50/80/100 原子）各 5 轮与一轮预热的 `total_time`、`peak_overlap`、`success_rate`，汇总为 `scale_stats.json`（中位数、四分位距、单原子摊销、最小二乘拟合） | 1 | 图4（4.3.4 规模扩展性） |
-| `output/paper/table5_ablation_group4/` | 2026-11-14 14:36–15:02 | 单原子模式 4 批（API33×3＋API34×1，每批 5 轮） | 20 | 表5 ④组（20 轮合并，42.35±2.50） |
-| `output/paper/table8_fault_adb_saf_pool/` | 2026-11-15 19:55 | ADB链路断开／SAF授权拒绝／会话池占满三类单注各 20 次：`inject_log.csv`＋`inject_summary.json`＋60 条 run json | 62 | 表8 前三行（该批 `dag_cycle` 因回边方向错误作废，已剔除） |
-| `output/paper/table8_fault_dag_cycle/` | 2026-11-15 21:50 | DAG环形依赖单注 20 次，20/20 拒绝加载（`refused`、`cycle_detected`、`cycle_path` 齐全） | 21 | 表8 第四行 |
-| `output/paper/appendix_policy_evidence/` | 2026-11-15 22:30（api33 于 23:19 补采） | 各 SDK 版本路径常量与目录快照：`getprop` 全量/过滤、`/proc/filesystems`、存储 mount、五条路径 `ls -ld`、目录快照、policy 文件、`sm list-volumes`、`policy_target`（每版 11 个文件） | 85 | 1-2 路径常量与目录快照证据；api33 首采时 FUSE 未就绪（`Transport endpoint is not connected`），已按“等 `/storage/emulated/0` 可列举”的补采覆盖，现无该报错 |
+| `output/paper/table5_ablation_group4/` | 2026-11-14 14:36–15:02 | 单原子模式 4 批（API33×3＋API34×1，每批 5 轮） | 20 | 表6 ④组（20 轮合并，42.35±2.50） |
+| `output/paper/table8_fault_adb_saf_pool/` | 2026-11-15 19:55 | ADB链路断开／SAF授权拒绝／会话池占满三类单注各 20 次：`inject_log.csv`＋`inject_summary.json`＋60 条 run json | 62 | 表9 前三行（该批 `dag_cycle` 因回边方向错误作废，已剔除） |
+| `output/paper/table8_fault_dag_cycle/` | 2026-11-15 21:50 | DAG环形依赖单注 20 次，20/20 拒绝加载（`refused`、`cycle_detected`、`cycle_path` 齐全） | 21 | 表9 第四行 |
+| `output/paper/appendix_policy_evidence/` | 2026-11-15 22:30（api33 于 23:19 补采） | 各 SDK 版本路径常量与目录快照：`getprop` 全量/过滤、`/proc/filesystems`、存储 mount、五条路径 `ls -ld`、目录快照、policy 文件、`sm list-volumes`、`policy_target`（每版 11 个文件） | 85 | 表5 策略分支与痕迹检出（1-2 证据）；api33 首采时 FUSE 未就绪（`Transport endpoint is not connected`），已按“等 `/storage/emulated/0` 可列举”的补采覆盖，现无该报错 |
 | `output/paper/policy_target_snapshots/` | 2026-11-14 15:21–16:12 | 每版本 `policy_target` 与分支判定 | 14 | 1-2 策略证据 |
 | `output/paper/downstream_split/` | 2026-11-13 11:38 | 下游验证的分组键定义（`split_summary.json`） | 1 | 4.3.7 按批次分组 |
 | `output/jitter_w6/` | 2026-08-22 | W=6 时段四类抖动分量测量（1000/200/100/100 次） | 2 | 表3 主数据 |
@@ -22,13 +22,13 @@
 
 - 运行记录（`*/runs/*/*.json`）：`api`、`scenario`、`scheduler`、`max_concurrency`、`policy_branch`、`policy_target`、`adapter`、`total_nodes`、`total_time`（秒）、`success_atoms`、`success_rate`、`mem_peak_mb`、`atoms[]`（每个原子的 `duration_ms`、`timestamp_start`、`timestamp_end`）。
 - 抖动量（`jitter_apiXX.json`）：`adb_roundtrip`、`host_overhead`、`service_resp`、`clock_window`、`kernel_jitter` 各含 `n/mean/sd/p50/p95`，`raw` 保留全部原始样本。
-- 统计规则：每组 5 轮，前两轮为冷启动预热；表4 取后三轮中位数，其余取均值±样本标准差；表5 ④组为 20 轮合并；表7 为每侧 11 轮、剔除首轮取 10 轮（冷启首轮耗时显著偏高）；**图4 取 5 轮中位数、误差棒为四分位距**（小规模档初始化占比高、离散度大，中位数口径可抑制单轮离群而不掩盖分布）。
-- 故障注入：`inject_summary.json` 给出 `completion_rate`（表8 所需口径）与每轮耗时，`inject_log.csv` 逐次记录注入点、观测结果与恢复动作。表8 口径为 API 35、W=1、`baseline_50`、各 20 次；环依赖行的 `completion_rate=0` 属预期拒绝加载，不代表机制失效。
+- 统计规则：每组 5 轮，前两轮为冷启动预热；表4 取后三轮中位数，其余取均值±样本标准差；表6 ④组为 20 轮合并；表8 为每侧 11 轮、剔除首轮取 10 轮（冷启首轮耗时显著偏高）；**图4 取 5 轮中位数、误差棒为四分位距**（小规模档初始化占比高、离散度大，中位数口径可抑制单轮离群而不掩盖分布）。
+- 故障注入：`inject_summary.json` 给出 `completion_rate`（表9 所需口径）与每轮耗时，`inject_log.csv` 逐次记录注入点、观测结果与恢复动作。表9 口径为 API 35、W=1、`baseline_50`、各 20 次；环依赖行的 `completion_rate=0` 属预期拒绝加载，不代表机制失效。
 
 ## 三、已知缺口
 
-1. **表7 两侧批次均已发布**：`output/paper/table7_virtual_real/` 收录模拟器（`emulator-5554`，AVD `rev_api35`）与 Pixel 7 真机（API 35）各 11 轮运行记录及痕迹审计结果，统计口径为剔首轮取 10 轮；真机侧 `serial` 字段已替换为 `REDACTED_PIXEL7`，复现路径见 `docs/pixel7_setup.md`。此前同源批次（未显式指定 `--serial`、模拟器批次误落到真机）已废弃，未入库。
-2. **表8 为四类故障单注口径，旧注入批次作废**：`fault_inject.py` 早期的 `dag_cycle` 把首节点加进尾节点 `depends_on`，只生成重复的正向依赖、未构成环，该批 `dag_cycle` 记录（代码指纹 `60d7d6dd45de4eb4`）中 `success_rate=1.0`、50/50 原子跑完，属无效样本，**禁止引用**；这批的 adb_disconnect／saf_deny／pool_exhaust 三类不受影响，仍为表8 前三行来源。修正后的环注入（尾节点回连首节点）与带加载期环检测的 `run_parallel.py` 同批采集于 `output/paper/table8_fault_dag_cycle/`，代码指纹 `448663002fb7cd55`，20/20 拒绝加载。统计只采信 `448663002fb7cd55` 批次的环依赖样本，两套指纹不可混用。
+1. **表8 两侧批次均已发布**：`output/paper/table7_virtual_real/` 收录模拟器（`emulator-5554`，AVD `rev_api35`）与 Pixel 7 真机（API 35）各 11 轮运行记录及痕迹审计结果，统计口径为剔首轮取 10 轮；真机侧 `serial` 字段已替换为 `REDACTED_PIXEL7`，复现路径见 `docs/pixel7_setup.md`。此前同源批次（未显式指定 `--serial`、模拟器批次误落到真机）已废弃，未入库。
+2. **表9 为四类故障单注口径，旧注入批次作废**：`fault_inject.py` 早期的 `dag_cycle` 把首节点加进尾节点 `depends_on`，只生成重复的正向依赖、未构成环，该批 `dag_cycle` 记录（代码指纹 `60d7d6dd45de4eb4`）中 `success_rate=1.0`、50/50 原子跑完，属无效样本，**禁止引用**；这批的 adb_disconnect／saf_deny／pool_exhaust 三类不受影响，仍为表9 前三行来源。修正后的环注入（尾节点回连首节点）与带加载期环检测的 `run_parallel.py` 同批采集于 `output/paper/table8_fault_dag_cycle/`，代码指纹 `448663002fb7cd55`，20/20 拒绝加载。统计只采信 `448663002fb7cd55` 批次的环依赖样本，两套指纹不可混用。
 3. **中间批次未入库**：`D:\REV\10_results` 共 55 个批次，仓库只保留口径定稿后的批次；重跑与探针的中间轮次（如 2026-11-13 多次 session、fix01–04、timing_v1）不发布，避免同一数字出现多套口径。
 4. **4.3.7 训练样本集不随仓库公开（已定口径）**：正文 1185 条样本（600 正常／175 勒索／585 恶意）由运行记录逐原子抽取的 `duration_ms`、`op_type`、`timestamp%1000` 与场景标签构成，含设备侧时序与场景节奏信息，公开仓库不收录原始明细；仓库改为提供分组键定义（`output/paper/downstream_split/split_summary.json`）与复算实现（`recalc_downstream_grouped.py`，`--dir <样本目录>`），复现请求时按需提供样本包。因此 4.3.7 在仓库内可复现方法、不能直接复算数字。
 5. **4.3.7 分类器为 numpy 自实现**：本机 sklearn 受应用控制策略拦截无法导入，故用自实现 CART 随机森林（200 树、depth=8、min_split=5、max_features=sqrt、gini），参数与实现均在 `recalc_downstream_grouped.py` 中，可直接复核。

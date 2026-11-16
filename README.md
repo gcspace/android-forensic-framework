@@ -41,7 +41,7 @@ adb wait-for-device && adb shell getprop sys.boot_completed   # 需输出 1
 python experiments/paper/run_parallel.py config/scenarios/baseline_50.yaml \
   --api 33 --scheduler priority --max-concurrency 6 --atomic-mode dag
 
-# 4. 四类故障注入（API 35、W=1、baseline_50，各 20 次；表8 口径）
+# 4. 四类故障注入（API 35、W=1、baseline_50，各 20 次；表9 口径）
 #    脚本会按 --device 显式绑定目标设备；多设备环境下 run_parallel.py 也要求 --serial
 python experiments/paper/fault_inject.py --fault adb_disconnect --repeat 20 --device emulator-5554 --api 35 --w 1 --scenario baseline_50 --out output/paper/table8_fault_adb_saf_pool/adb_disconnect
 python experiments/paper/fault_inject.py --fault saf_deny --repeat 20 --device emulator-5554 --api 35 --w 1 --scenario baseline_50 --pkg com.android.chrome --out output/paper/table8_fault_adb_saf_pool/saf_deny
@@ -66,7 +66,7 @@ W 参数敏感性实验（4.3.1 与图3）表明：
 ## 统计口径
 
 - 每组重复 5 次，前两轮为冷启动预热；
-- 表4 取后三轮中位数；图3、表5、表6 取 5 轮均值±样本标准差；表5 ④组为 20 轮合并；
+- 表4 取后三轮中位数；图3、表6、表7 取 5 轮均值±样本标准差；表6 ④组为 20 轮合并；
 - 表3 合计为“ADB 传输开销＋系统服务响应＋读取窗长”三项之和，内核噪声单列不参与占比；
 - 全部耗时走 `run_parallel.py`；`W=1` 指并发上限 1，与旧串行入口 `run_real_device.py` 的输出不可混算。
 
